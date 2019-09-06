@@ -1,0 +1,11 @@
+{
+  "name": "mongodb",
+  "connector": "loopback-connector-mongodb",
+  "url": "mongodb+srv://Peterson:Wakethefuckup1@wine1-sjhim.mongodb.net/test?retryWrites=true&w=majority",
+  "host": "localhost",
+  "port": 27017,
+  "user": "Peterson",
+  "password": "Wakethefuckup1",
+  "database": "Wine1",
+  "useNewUrlParser": true
+}

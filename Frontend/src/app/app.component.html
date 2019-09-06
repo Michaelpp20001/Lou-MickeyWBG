@@ -1,0 +1,20 @@
+<h1>
+  Welcome to {{ title }}!
+</h1>
+
+<nav>
+  <a [routerLink] = "'/wbgList'">
+    All WBG
+  </a>
+  <a [routerLink] = "'/redWine'">
+    Red Wine
+  </a>
+  <a [routerLink] = "'/whiteWine'">
+    White Wine
+  </a>
+  <a [routerLink] = "'/sparklingWine'">
+    Sparkling Wine
+  </a>
+</nav>
+
+<router-outlet></router-outlet>
