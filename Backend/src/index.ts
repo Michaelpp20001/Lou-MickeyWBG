@@ -1,10 +1,10 @@
-import {WineBackendApplication} from './application';
+import {LouMickeysWineApplication} from './application';
 import {ApplicationConfig} from '@loopback/core';
 
-export {WineBackendApplication};
+export {LouMickeysWineApplication};
 
 export async function main(options: ApplicationConfig = {}) {
-  const app = new WineBackendApplication(options);
+  const app = new LouMickeysWineApplication(options);
   await app.boot();
   await app.start();
 

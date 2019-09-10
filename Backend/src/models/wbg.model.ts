@@ -1,12 +1,18 @@
 import {Entity, model, property} from '@loopback/repository';
 
-@model({settings: {}})
+@model({settings: {strict: false}})
 export class Wbg extends Entity {
   @property({
-    type: 'number',
+    type: 'string',
+    required: true,
+  })
+  category: string;
+
+  @property({
+    type: 'string',
     id: true,
   })
-  id?: number;
+  id?: string;
 
   @property({
     type: 'string',
@@ -24,7 +30,7 @@ export class Wbg extends Entity {
     type: 'string',
     required: true,
   })
-  grapes: string;
+  grape: string;
 
   @property({
     type: 'string',
@@ -48,7 +54,7 @@ export class Wbg extends Entity {
     type: 'string',
     required: true,
   })
-  sight: string;
+  apperance: string;
 
   @property({
     type: 'string',
@@ -63,28 +69,36 @@ export class Wbg extends Entity {
   palate: string;
 
   @property({
-    type: 'number',
-    required: true,
-  })
-  abv: number;
-
-  @property({
     type: 'string',
     required: true,
   })
-  winemakingNotes: string;
+  abv: string;
 
   @property({
     type: 'string',
-    required: true,
   })
-  foodPairings: string;
+  wineMakingNotes?: string;
+
+  @property({
+    type: 'string',
+  })
+  foodPairings?: string;
 
   @property({
     type: 'string',
   })
   notes?: string;
 
+  @property({
+    type: 'string',
+  })
+  labelImage?: string;
+
+  // Define well-known properties here
+
+  // Indexer property to allow additional data
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [prop: string]: any;
 
   constructor(data?: Partial<Wbg>) {
     super(data);

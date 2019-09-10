@@ -109,7 +109,7 @@ export class WbgController {
       },
     },
   })
-  async findById(@param.path.number('id') id: number): Promise<Wbg> {
+  async findById(@param.path.string('id') id: string): Promise<Wbg> {
     return this.wbgRepository.findById(id);
   }
 
@@ -121,7 +121,7 @@ export class WbgController {
     },
   })
   async updateById(
-    @param.path.number('id') id: number,
+    @param.path.string('id') id: string,
     @requestBody({
       content: {
         'application/json': {
@@ -142,7 +142,7 @@ export class WbgController {
     },
   })
   async replaceById(
-    @param.path.number('id') id: number,
+    @param.path.string('id') id: string,
     @requestBody() wbg: Wbg,
   ): Promise<void> {
     await this.wbgRepository.replaceById(id, wbg);
@@ -155,7 +155,7 @@ export class WbgController {
       },
     },
   })
-  async deleteById(@param.path.number('id') id: number): Promise<void> {
+  async deleteById(@param.path.string('id') id: string): Promise<void> {
     await this.wbgRepository.deleteById(id);
   }
 }

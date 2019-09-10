@@ -1,10 +1,10 @@
-import {WineBackendApplication} from './application';
+import {LouMickeysWineApplication} from './application';
 
 export async function migrate(args: string[]) {
   const existingSchema = args.includes('--rebuild') ? 'drop' : 'alter';
   console.log('Migrating schemas (%s existing schema)', existingSchema);
 
-  const app = new WineBackendApplication();
+  const app = new LouMickeysWineApplication();
   await app.boot();
   await app.migrateSchema({existingSchema});
 

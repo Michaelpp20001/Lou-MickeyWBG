@@ -1,9 +1,9 @@
 import {Client} from '@loopback/testlab';
-import {WineBackendApplication} from '../..';
+import {LouMickeysWineApplication} from '../..';
 import {setupApplication} from './test-helper';
 
 describe('HomePage', () => {
-  let app: WineBackendApplication;
+  let app: LouMickeysWineApplication;
   let client: Client;
 
   before('setupApplication', async () => {
