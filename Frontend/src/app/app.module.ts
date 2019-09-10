@@ -8,6 +8,7 @@ import { WbgListComponent } from './wbg-list/wbg-list.component';
 import { RedWineComponent } from './red-wine/red-wine.component';
 import { WhiteWineComponent } from './white-wine/white-wine.component';
 import { SparklingWineComponent } from './sparkling-wine/sparkling-wine.component';
+import { NewWbgComponent } from './new-wbg/new-wbg.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SparklingWineComponent } from './sparkling-wine/sparkling-wine.componen
     WbgListComponent,
     RedWineComponent,
     WhiteWineComponent,
-    SparklingWineComponent
+    SparklingWineComponent,
+    NewWbgComponent
   ],
   imports: [
     BrowserModule,
