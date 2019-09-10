@@ -10,20 +10,22 @@ export class WineService {
 
   baseUrl: string = "http://localhost:3000/wbgs";
 
-  wine: any = {
+  newWine: any = {
+      category: "",
       name: "",
       producer: "",
-      grapes: "",
+      grape: "",
       country: "",
       region: "",
       subRegion: "",
-      sight: "",
+      apperance: "",
       nose: "",
       palate: "",
-      abv: 0,
-      winemakingNotes: "",
+      abv: "",
+      wineMakingNotes: "",
       foodPairings: "",
       notes: "",
+      labelImage: "",
   };
 
 }
