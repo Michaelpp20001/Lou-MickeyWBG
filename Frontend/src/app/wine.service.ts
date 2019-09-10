@@ -28,4 +28,11 @@ export class WineService {
       labelImage: "",
   };
 
+  upload() {
+    this.http.post(this.baseUrl, this.newWine)
+    .subscribe(res => {
+      console.log(res);
+    });
+  }
+
 }

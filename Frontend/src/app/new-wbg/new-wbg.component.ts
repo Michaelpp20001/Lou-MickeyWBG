@@ -10,6 +10,21 @@ export class NewWbgComponent implements OnInit {
 
   constructor(private _wine: WineService) { }
 
+  onFileSelected(event) {
+    console.log(event);
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onloadend = function() {
+      console.log('RESULT', reader.result)
+    };
+    reader.readAsDataURL(file);
+  }
+
+  onUpload() {
+
+    this._wine.upload();
+  }
+
   ngOnInit() {
   }
 
