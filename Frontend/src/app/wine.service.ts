@@ -32,6 +32,7 @@ export class WineService {
     this.http.post(this.baseUrl, this.newWine)
     .subscribe(res => {
       console.log(res);
+      sessionStorage.clear();
     });
   }
 
