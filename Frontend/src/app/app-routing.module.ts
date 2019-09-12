@@ -8,6 +8,7 @@ import { NewWbgComponent } from './new-wbg/new-wbg.component'
 
 
 const routes: Routes = [
+  {path: '', redirectTo: '/heroes', pathMatch: 'full'},
   {path: 'wbgList' , component: WbgListComponent},
   {path: 'redWine' , component: RedWineComponent},
   {path: 'whiteWine' , component: WhiteWineComponent},
