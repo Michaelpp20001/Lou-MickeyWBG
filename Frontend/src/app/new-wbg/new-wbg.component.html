@@ -22,5 +22,5 @@
     Food Pairings<input [(ngModel)]="this._wine.newWine.foodPairings" name="foodPairings" type="text"><br>
     Notes<input [(ngModel)]="this._wine.newWine.notes" name="notes" type="text"><br>
     Upload label image<input type="file" (change)="onFileSelected($event)"><br>
-    <button type="button" (click)="onUpload()">Submit New Wine</button>
+    <button type="button" (click)="onUploadNewWine()">Submit New Wine</button>
 </form>

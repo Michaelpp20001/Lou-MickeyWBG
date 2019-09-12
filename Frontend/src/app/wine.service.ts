@@ -37,12 +37,13 @@ export class WineService {
     .subscribe(response => {
       console.log(response);
       sessionStorage.clear();
+      this.getAllWbg();
     });
   }
 
   getAllWbg() {
     //get all Wbg and store to all Wbg variable
-    
+
     this.http.get(this.baseUrl)
     .subscribe(response => {
       console.log("All WBG", response);

@@ -2,23 +2,25 @@
 
 <div *ngIf="this._wine.allWbg">
     <div class="container">
-        <div class="labelImage">
-            <img src="{{this._wine.allWbg[2].labelImage}}" alt="wine labelImage"><br>
-        </div>
-        <div class="description">
-            <strong>Name:</strong> {{this._wine.allWbg[2].name}}<br>
-            <strong>Producer:</strong> {{this._wine.allWbg[2].producer}}<br>
-            <strong>Grape:</strong> {{this._wine.allWbg[2].grape}}<br>
-            <strong>Country:</strong> {{this._wine.allWbg[2].country}}<br>
-            <strong>Region:</strong> {{this._wine.allWbg[2].region}}<br>
-            <strong>Sub Region:</strong> {{this._wine.allWbg[2].subRegion}}<br>
-            <strong>Appearance:</strong> {{this._wine.allWbg[2].apperance}}<br>
-            <strong>Nose:</strong> {{this._wine.allWbg[2].nose}}<br>
-            <strong>Palate:</strong> {{this._wine.allWbg[2].palate}}<br>
-            <strong>ABV:</strong> {{this._wine.allWbg[2].abv}}<br>
-            <strong>Winemaking Notes:</strong> {{this._wine.allWbg[2].wineMakingNotes}}<br>
-            <strong>Food Pairings:</strong> {{this._wine.allWbg[2].foodPairings}}<br>
-            <strong>Notes:</strong> {{this._wine.allWbg[2].notes}}<br>
+        <div class="wine" *ngFor="let wine of this._wine.allWbg">
+            <div class="labelImage">
+            <img src="{{wine.labelImage}}" alt="wine labelImage"><br>
+            </div>
+            <div class="description">
+            <strong>Name:</strong> {{wine.name}}<br>
+            <strong>Producer:</strong> {{wine.producer}}<br>
+            <strong>Grape:</strong> {{wine.grape}}<br>
+            <strong>Country:</strong> {{wine.country}}<br>
+            <strong>Region:</strong> {{wine.region}}<br>
+            <strong>Sub Region:</strong> {{wine.subRegion}}<br>
+            <strong>Appearance:</strong> {{wine.apperance}}<br>
+            <strong>Nose:</strong> {{wine.nose}}<br>
+            <strong>Palate:</strong> {{wine.palate}}<br>
+            <strong>ABV:</strong> {{wine.abv}}<br>
+            <strong>Winemaking Notes:</strong> {{wine.wineMakingNotes}}<br>
+            <strong>Food Pairings:</strong> {{wine.foodPairings}}<br>
+            <strong>Notes:</strong> {{wine.notes}}<br>
+            </div>
         </div>
     </div>
 </div>
