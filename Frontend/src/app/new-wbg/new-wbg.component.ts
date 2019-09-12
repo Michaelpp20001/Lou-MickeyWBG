@@ -11,6 +11,8 @@ export class NewWbgComponent implements OnInit {
   constructor(private _wine: WineService) { }
 
   onFileSelected(event) {
+    //Upload a new label image from file on PC and convert to base64, 
+    //also save to session storage for later retrieval
 
     console.log(event);
 
@@ -28,9 +30,12 @@ export class NewWbgComponent implements OnInit {
     
   }
 
-  onUpload() {
+  onUploadNewWine() {
     this._wine.newWine.labelImage = sessionStorage.getItem("base64Image");
-    this._wine.upload();
+    //retrieving label image base64 from session storage and 
+    //setting to new wine label image for upload
+    
+    this._wine.uploadNewWine();
   }
 
   ngOnInit() {

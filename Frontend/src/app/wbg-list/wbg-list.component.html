@@ -1,1 +1,7 @@
 <p>wbg-list works!</p>
+
+<div *ngIf="this._wine.allWbg">
+    <p>{{this._wine.allWbg[0].name}}</p>
+    <p>{{this._wine.allWbg[1].name}}</p>
+    <img src="{{this._wine.allWbg[2].labelImage}}" alt="wine labelImage">
+</div>
