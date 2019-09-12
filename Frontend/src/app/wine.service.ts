@@ -30,10 +30,16 @@ export class WineService {
 
   upload() {
     this.http.post(this.baseUrl, this.newWine)
-    .subscribe(res => {
-      console.log(res);
+    .subscribe(response => {
+      console.log(response);
       sessionStorage.clear();
     });
   }
 
+  getAllWbg() {
+    this.http.get(this.baseUrl)
+    .subscribe(response => {
+      console.log("All WBG", response);
+    });
+  }
 }

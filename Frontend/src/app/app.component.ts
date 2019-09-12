@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WineService } from './wine.service'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Frontend Lou & Mickeys WBG';
+
+  constructor(private _wine: WineService) { }
+
+  ngOnInit() {
+    this._wine.getAllWbg();
+  }
 }
