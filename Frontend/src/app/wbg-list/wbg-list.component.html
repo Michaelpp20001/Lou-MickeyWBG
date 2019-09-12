@@ -1,7 +1,24 @@
 <p>wbg-list works!</p>
 
 <div *ngIf="this._wine.allWbg">
-    <p>{{this._wine.allWbg[0].name}}</p>
-    <p>{{this._wine.allWbg[1].name}}</p>
-    <img src="{{this._wine.allWbg[2].labelImage}}" alt="wine labelImage">
+    <div class="container">
+        <div class="labelImage">
+            <img src="{{this._wine.allWbg[2].labelImage}}" alt="wine labelImage"><br>
+        </div>
+        <div class="description">
+            <strong>Name:</strong> {{this._wine.allWbg[2].name}}<br>
+            <strong>Producer:</strong> {{this._wine.allWbg[2].producer}}<br>
+            <strong>Grape:</strong> {{this._wine.allWbg[2].grape}}<br>
+            <strong>Country:</strong> {{this._wine.allWbg[2].country}}<br>
+            <strong>Region:</strong> {{this._wine.allWbg[2].region}}<br>
+            <strong>Sub Region:</strong> {{this._wine.allWbg[2].subRegion}}<br>
+            <strong>Appearance:</strong> {{this._wine.allWbg[2].apperance}}<br>
+            <strong>Nose:</strong> {{this._wine.allWbg[2].nose}}<br>
+            <strong>Palate:</strong> {{this._wine.allWbg[2].palate}}<br>
+            <strong>ABV:</strong> {{this._wine.allWbg[2].abv}}<br>
+            <strong>Winemaking Notes:</strong> {{this._wine.allWbg[2].wineMakingNotes}}<br>
+            <strong>Food Pairings:</strong> {{this._wine.allWbg[2].foodPairings}}<br>
+            <strong>Notes:</strong> {{this._wine.allWbg[2].notes}}<br>
+        </div>
+    </div>
 </div>
