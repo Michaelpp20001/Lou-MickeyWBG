@@ -10,6 +10,10 @@ export class WineService {
 
   baseUrl: string = "http://localhost:3000/wbgs";
 
+  selectedFile: any = {
+    labelImage: "",
+  };
+
   allWbg: any;
 
   newWine: any = {
@@ -37,6 +41,8 @@ export class WineService {
     .subscribe(response => {
       console.log(response);
       sessionStorage.clear();
+      this.clearWbgInputs();
+      this.selectedFile.labelImage = "";
       this.getAllWbg();
     });
   }
@@ -49,5 +55,25 @@ export class WineService {
       console.log("All WBG", response);
       this.allWbg = response;
     });
+  }
+
+  clearWbgInputs() {
+    this.newWine = {
+      category: "",
+      name: "",
+      producer: "",
+      grape: "",
+      country: "",
+      region: "",
+      subRegion: "",
+      apperance: "",
+      nose: "",
+      palate: "",
+      abv: "",
+      wineMakingNotes: "",
+      foodPairings: "",
+      notes: "",
+      labelImage: "",
+  };
   }
 }
