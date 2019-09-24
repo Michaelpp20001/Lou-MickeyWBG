@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WineService } from '../wine.service';
 
 @Component({
   selector: 'app-white-wine',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WhiteWineComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _wine: WineService) { }
 
   ngOnInit() {
   }

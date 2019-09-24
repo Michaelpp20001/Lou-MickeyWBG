@@ -49,13 +49,12 @@ export class WineService {
       console.log(response);
       sessionStorage.clear();
       this.clearWbgInputs();
-      this.selectedFile.labelImage = "";
       this.getAllWbg();
     });
   }
 
   getAllWbg() {
-    //get all Wbg and store to all Wbg variable
+    //get all Wbg and store to all Wbg variable/update arrays
 
     this.http.get(this.baseUrl)
     .subscribe(response => {
@@ -79,6 +78,10 @@ export class WineService {
   }
 
   clearWbgInputs() {
+    this.sparklingWine = [];
+    this.whiteWine = [];
+    this.redWine = [];
+    this.selectedFile.labelImage = "";
     this.newWine = {
       category: "",
       name: "",
