@@ -31,8 +31,6 @@ export class NewWbgComponent implements OnInit {
 
   previewImage() {
     this._wine.selectedFile.labelImage = sessionStorage.getItem("base64Image");
-
-    console.log("selected file label image", this._wine.selectedFile.labelImage)
   }
 
   onUploadNewWine() {
