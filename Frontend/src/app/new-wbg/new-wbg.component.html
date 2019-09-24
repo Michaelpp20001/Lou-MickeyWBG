@@ -38,10 +38,10 @@
         <div class="category">Notes</div>
         <div class="input"><input [(ngModel)]="this._wine.newWine.notes" name="notes" type="text" size="40"></div>
         <div class="category">Upload label image<input type="file" (change)="onFileSelected($event)"></div>
+        <div class="previewImageBUtton"><button type="button" (click)="previewImage()">Preview Label Image</button></div>
         <div class="labelImage" *ngIf="this._wine.selectedFile.labelImage">
             <img src="{{this._wine.selectedFile.labelImage}}" alt="selected labelImage"><br>
         </div>
-        <div class="previewImageBUtton"><button type="button" (click)="previewImage()">Preview Label Image</button></div>
         <div class="submitButton"><button type="button" (click)="onUploadNewWine()">Submit New Wine</button></div>
     </form>
 </div>
