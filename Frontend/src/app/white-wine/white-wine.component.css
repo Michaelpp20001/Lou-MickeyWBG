@@ -11,10 +11,19 @@ img {
 
 .wine {
     display: flex;
+    padding: 10px;
 }
 
 .labelImage {
+    min-width: 200px;
+    text-align: center;
+    padding-top: 4%;
+}
 
+.nameTitle {
+    font-family: 'aspire', 'arial', sans-serif;
+    text-align: center;
+    font-size: 40px;
 }
 
 .description {
