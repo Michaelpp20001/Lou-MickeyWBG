@@ -15,9 +15,9 @@ img {
 }
 
 .labelImage {
-    min-width: 200px;
+    min-width: 20%;
     text-align: center;
-    padding-top: 4%;
+    padding-top: 3%;
 }
 
 .nameTitle {
@@ -27,5 +27,5 @@ img {
 }
 
 .description {
-
+    min-width: 80%;
 }
