@@ -11,10 +11,18 @@ img {
 
 .wine {
     display: flex;
+    padding: 10px;
 }
 
 .labelImage {
+    min-width: 200px;
+    text-align: center;
+}
 
+.nameTitle {
+    font-family: 'snell roundhand', cursive;
+    text-align: center;
+    font-size: 20px;
 }
 
 .description {
