@@ -1,0 +1,12 @@
+.louLogo {
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navlink {
+    padding: 10px;
+}

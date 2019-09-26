@@ -1,23 +1,34 @@
-<h1>
-  Welcome to {{ title }}!
-</h1>
+<div class="louLogo">
+  <img src="../assets/LouandMickeys_LOGOS-05.png" alt="Lou and Mickey's logo">
+</div>
 
-<nav>
-  <a [routerLink] = "'/wbgList'">
-    All WBG
-  </a>
-  <a [routerLink] = "'/redWine'">
-    Red Wine
-  </a>
-  <a [routerLink] = "'/whiteWine'">
-    White Wine
-  </a>
-  <a [routerLink] = "'/sparklingWine'">
-    Sparkling Wine
-  </a>
-  <a [routerLink] = "'/newWBG'">
-    Add New WBG
-  </a>
-</nav>
+
+<div class="navbar">
+  <div class="navlink">
+    <a [routerLink] = "'/wbgList'">
+      All WBG
+    </a>
+  </div>
+  <div class="navlink">
+    <a [routerLink] = "'/redWine'">
+      Red Wine
+    </a>
+  </div>
+  <div class="navlink">
+    <a [routerLink] = "'/whiteWine'">
+      White Wine
+    </a>
+  </div>
+  <div class="navlink">
+    <a [routerLink] = "'/sparklingWine'">
+      Sparkling Wine
+    </a>
+  </div>
+  <div class="navlink">
+    <a [routerLink] = "'/newWBG'">
+      Add New WBG
+    </a>
+  </div>
+</div>
 
 <router-outlet></router-outlet>
