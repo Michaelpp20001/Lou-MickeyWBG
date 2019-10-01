@@ -102,6 +102,7 @@ export class WineService {
 
   searchWBG() {
     this.searchTerm = this.searchTerm.toLowerCase();
+    //filtering search term through the backend "keywords" array
     this.http.get(this.baseUrl + "?filter[where][keywords]=" + this.searchTerm)
     .subscribe((response => {
 
