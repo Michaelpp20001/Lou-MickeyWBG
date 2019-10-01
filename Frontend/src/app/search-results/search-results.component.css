@@ -1,0 +1,35 @@
+img {
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.wine {
+    display: flex;
+    padding: 10px;
+}
+
+.labelImage {
+    min-width: 20%;
+    text-align: center;
+    padding-top: 3%;
+}
+
+.nameTitle {
+    font-family: 'aspire', 'arial', sans-serif;
+    text-align: center;
+    font-size: 40px;
+}
+
+.description {
+    min-width: 80%;
+}
+
+p {
+    text-align: center;
+}

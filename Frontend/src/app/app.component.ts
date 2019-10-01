@@ -14,4 +14,8 @@ export class AppComponent {
   ngOnInit() {
     this._wine.getAllWbg();
   }
+
+  onSearchWBG() {
+    this._wine.searchWBG();
+  }
 }

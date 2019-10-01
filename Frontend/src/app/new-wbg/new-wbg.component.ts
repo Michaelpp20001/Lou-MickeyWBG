@@ -34,10 +34,37 @@ export class NewWbgComponent implements OnInit {
   }
 
   onUploadNewWine() {
-    this._wine.newWine.labelImage = sessionStorage.getItem("base64Image");
     //retrieving label image base64 from session storage and 
     //setting to new wine label image for upload
+    let wine = this._wine.newWine;
+    let space = " ";
+    wine.labelImage = sessionStorage.getItem("base64Image");
+    //taking all inputs from new wbg component and creating a keywords array
+    this._wine.keywords = this._wine.keywords + space +
+    wine.category + space +
+    wine.name + space +
+    wine.producer + space +
+    wine.grape + space +
+    wine.country + space +
+    wine.region + space +
+    wine.subRegion + space +
+    wine.apperance + space +
+    wine.nose + space +
+    wine.palate + space +
+    wine.abv + space +
+    wine.wineMakingNotes + space +
+    wine.foodPairings + space +
+    wine.notes + space;
+    this._wine.keywords = this._wine.keywords.toLowerCase()
+
+    console.log("to lower case pre array", this._wine.keywords)
     
+    this._wine.keywords = this._wine.stringToArray(this._wine.keywords)
+    this._wine.filterKeywords(this._wine.keywords)
+
+    console.log("filtered keywords array", this._wine.keywords)
+
+    this._wine.newWine.keywords = this._wine.keywords
     this._wine.uploadNewWine();
   }
 

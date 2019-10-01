@@ -10,6 +10,7 @@ import { RedWineComponent } from './red-wine/red-wine.component';
 import { WhiteWineComponent } from './white-wine/white-wine.component';
 import { SparklingWineComponent } from './sparkling-wine/sparkling-wine.component';
 import { NewWbgComponent } from './new-wbg/new-wbg.component';
+import { SearchResultsComponent } from './search-results/search-results.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NewWbgComponent } from './new-wbg/new-wbg.component';
     RedWineComponent,
     WhiteWineComponent,
     SparklingWineComponent,
-    NewWbgComponent
+    NewWbgComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,

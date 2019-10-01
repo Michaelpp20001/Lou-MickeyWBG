@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WineService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   baseUrl: string = "http://localhost:3000/wbgs";
 
@@ -16,11 +17,23 @@ export class WineService {
 
   allWbg: any;
 
-  sparklingWine = [];
+  sparklingWine: any = [];
 
-  whiteWine = [];
+  whiteWine: any = [];
 
-  redWine= [];
+  redWine: any = [];
+
+  keywords: any = [];
+
+  filterWords: any = ["the", "a", "an", "and"];
+
+  searchTerm: string = "";
+
+  finalizedSearchTerm: string = "";
+
+  searchResults: any = [];
+
+  noSearchResults: any = "";
 
   newWine: any = {
       category: "",
@@ -40,6 +53,15 @@ export class WineService {
       labelImage: "",
       keywords: [],
   };
+
+  filterKeywords(arr) {
+    let result = arr.filter(word => !this.filterWords.includes(word))
+    this.keywords = result
+  }
+
+  stringToArray(str) {
+    return str.trim().split(" ")
+  }
 
   uploadNewWine() {
     //post a new wine to the backend
@@ -76,6 +98,32 @@ export class WineService {
         }
       };
     });
+  }
+
+  searchWBG() {
+    this.searchTerm = this.searchTerm.toLowerCase();
+    this.http.get(this.baseUrl + "?filter[where][keywords]=" + this.searchTerm)
+    .subscribe((response => {
+
+      console.log(response)
+
+      this.searchResults = response
+      if(this.searchResults[0]) {
+        this.finalizedSearchTerm = this.searchTerm
+        this.searchTerm = ""
+        this.noSearchResults = ""
+        this.router.navigateByUrl('/searchResults')
+      } else {
+        this.finalizedSearchTerm = this.searchTerm
+        this.searchTerm = ""
+        this.noSearchResults = "No search results!"
+        this.router.navigateByUrl('/wbgList')
+      }
+    }))
+  }
+
+  clearSearch() {
+    this.noSearchResults = "";
   }
 
   clearWbgInputs() {

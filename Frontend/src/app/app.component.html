@@ -5,30 +5,40 @@
 
 <div class="navbar">
   <div class="navlink">
-    <a [routerLink] = "'/wbgList'">
+    <a (click)="this._wine.clearSearch()" [routerLink] = "'/wbgList'">
       All WBG
     </a>
   </div>
   <div class="navlink">
-    <a [routerLink] = "'/redWine'">
+    <a (click)="this._wine.clearSearch()" [routerLink] = "'/redWine'">
       Red Wine
     </a>
   </div>
   <div class="navlink">
-    <a [routerLink] = "'/whiteWine'">
+    <a (click)="this._wine.clearSearch()" [routerLink] = "'/whiteWine'">
       White Wine
     </a>
   </div>
   <div class="navlink">
-    <a [routerLink] = "'/sparklingWine'">
+    <a (click)="this._wine.clearSearch()" [routerLink] = "'/sparklingWine'">
       Sparkling Wine
     </a>
   </div>
   <div class="navlink">
-    <a [routerLink] = "'/newWBG'">
+    <a (click)="this._wine.clearSearch()" [routerLink] = "'/newWBG'">
       Add New WBG
     </a>
   </div>
 </div>
+
+<div class="wrap">
+  <div class="search">
+     <input [(ngModel)]="this._wine.searchTerm" type="text" class="searchTerm" placeholder="What are you looking for?">
+     <button (click)="onSearchWBG()" type="submit" class="searchButton">
+      Go
+    </button>
+  </div>
+</div>
+<p *ngIf="this._wine.noSearchResults">No results for "{{this._wine.finalizedSearchTerm}}"!</p>
 
 <router-outlet></router-outlet>
