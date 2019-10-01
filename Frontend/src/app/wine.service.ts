@@ -38,6 +38,7 @@ export class WineService {
       foodPairings: "",
       notes: "",
       labelImage: "",
+      keywords: [],
   };
 
   uploadNewWine() {
@@ -98,6 +99,7 @@ export class WineService {
       foodPairings: "",
       notes: "",
       labelImage: "",
+      keywords: [],
   };
   }
 }
