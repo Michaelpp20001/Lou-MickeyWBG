@@ -6,6 +6,7 @@ import { WhiteWineComponent } from './white-wine/white-wine.component';
 import { SparklingWineComponent } from './sparkling-wine/sparkling-wine.component';
 import { NewWbgComponent } from './new-wbg/new-wbg.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
+import { UpdateWbgComponent } from './update-wbg/update-wbg.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'whiteWine' , component: WhiteWineComponent},
   {path: 'sparklingWine' , component: SparklingWineComponent},
   {path: 'newWBG' , component: NewWbgComponent},
-  {path: 'searchResults' , component: SearchResultsComponent}
+  {path: 'searchResults' , component: SearchResultsComponent},
+  {path: 'updateWbg' , component: UpdateWbgComponent}
 ];
 
 @NgModule({

@@ -11,6 +11,8 @@ import { WhiteWineComponent } from './white-wine/white-wine.component';
 import { SparklingWineComponent } from './sparkling-wine/sparkling-wine.component';
 import { NewWbgComponent } from './new-wbg/new-wbg.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
+import { WineService } from './wine.service';
+import { UpdateWbgComponent } from './update-wbg/update-wbg.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     WhiteWineComponent,
     SparklingWineComponent,
     NewWbgComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    UpdateWbgComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,9 @@ import { SearchResultsComponent } from './search-results/search-results.componen
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    WineService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

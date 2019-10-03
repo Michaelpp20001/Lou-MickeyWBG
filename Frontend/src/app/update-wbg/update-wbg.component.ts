@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { WineService } from '../wine.service';
 
 @Component({
-  selector: 'app-new-wbg',
-  templateUrl: './new-wbg.component.html',
-  styleUrls: ['./new-wbg.component.css']
+  selector: 'app-update-wbg',
+  templateUrl: './update-wbg.component.html',
+  styleUrls: ['./update-wbg.component.css']
 })
-export class NewWbgComponent implements OnInit {
+export class UpdateWbgComponent implements OnInit {
 
   constructor(private _wine: WineService) { }
 
@@ -33,9 +33,8 @@ export class NewWbgComponent implements OnInit {
     this._wine.selectedFile.labelImage = sessionStorage.getItem("base64Image");
   }
 
-  onUploadNewWine() {
-    this._wine.winePreLoad();
-    this._wine.uploadNewWine();
+  onUpdateWine() {
+    this._wine.updateWine();
   }
 
   ngOnInit() {

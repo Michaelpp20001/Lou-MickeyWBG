@@ -25,7 +25,7 @@ export class WineService {
 
   keywords: any = [];
 
-  filterWords: any = ["the", "a", "an", "and"];
+  filterWords: any = ["the", "a", "an", "and", ",", ":", ";"];
 
   searchTerm: string = "";
 
@@ -33,7 +33,7 @@ export class WineService {
 
   searchResults: any = [];
 
-  noSearchResults: any = "";
+  noSearchResults: string = "";
 
   newWine: any = {
       category: "",
@@ -66,13 +66,14 @@ export class WineService {
   uploadNewWine() {
     //post a new wine to the backend
     //and clear out remaining inputs in view and storage methods
-
+    this.winePreLoad();
     this.http.post(this.baseUrl, this.newWine)
     .subscribe(response => {
       console.log(response);
       sessionStorage.clear();
       this.clearWbgInputs();
       this.getAllWbg();
+      this.router.navigateByUrl('/wbgList')
     });
   }
 
@@ -108,11 +109,13 @@ export class WineService {
 
       console.log(response)
 
+      //setting search response to search results and navigating to either component view
+      //seperate page for search results or staying on wbg list
       this.searchResults = response
       if(this.searchResults[0]) {
         this.finalizedSearchTerm = this.searchTerm
         this.searchTerm = ""
-        this.noSearchResults = ""
+        this.clearSearch()
         this.router.navigateByUrl('/searchResults')
       } else {
         this.finalizedSearchTerm = this.searchTerm
@@ -123,11 +126,66 @@ export class WineService {
     }))
   }
 
+  winePreLoad() {
+    //retrieving label image base64 from session storage and 
+    //setting to new wine label image for upload
+    let wine = this.newWine;
+    let space = " ";
+    wine.labelImage = sessionStorage.getItem("base64Image");
+    //taking all inputs from new wbg/upadate wine component and creating a keywords array
+    this.keywords = this.keywords + space +
+    wine.category + space +
+    wine.name + space +
+    wine.producer + space +
+    wine.grape + space +
+    wine.country + space +
+    wine.region + space +
+    wine.subRegion + space +
+    wine.apperance + space +
+    wine.nose + space +
+    wine.palate + space +
+    wine.abv + space +
+    wine.wineMakingNotes + space +
+    wine.foodPairings + space +
+    wine.notes + space;
+    this.keywords = this.keywords.toLowerCase()
+
+    console.log("to lower case pre array", this.keywords)
+    
+    this.keywords = this.stringToArray(this.keywords)
+    this.filterKeywords(this.keywords)
+
+    console.log("filtered keywords array", this.keywords)
+
+    this.newWine.keywords = this.keywords
+  }
+
+  selectWine(wine) {
+
+    console.log("Selected wine for update", wine)
+
+    this.newWine = wine
+    this.router.navigateByUrl('/updateWbg');
+  }
+
+  updateWine() {
+    this.winePreLoad();
+    this.http.put(this.baseUrl + "/" + this.newWine.id, this.newWine)
+    .subscribe(update => {
+      console.log("Update Success!");
+      sessionStorage.clear();
+      this.clearWbgInputs();
+      this.getAllWbg();
+      this.router.navigateByUrl('/wbgList')
+    });
+  }
+
   clearSearch() {
     this.noSearchResults = "";
   }
 
   clearWbgInputs() {
+    this.keywords = [];
     this.sparklingWine = [];
     this.whiteWine = [];
     this.redWine = [];
