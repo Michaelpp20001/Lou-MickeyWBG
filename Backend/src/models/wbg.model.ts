@@ -89,10 +89,8 @@ export class Wbg extends Entity {
   })
   notes?: string;
 
-  @property({
-    type: 'array',
-  })
-  keywords?: string[];
+  @property.array(String)
+  keywords?: string[]
 
   @property({
     type: 'string',
