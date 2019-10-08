@@ -31,6 +31,8 @@ export class WineService {
 
   PositiveSearchTerm: any;
 
+  PositiveSearchResult: boolean = false;
+
   NegativeSearchTerm: any;
 
   searchResults: any = [];
@@ -104,6 +106,7 @@ export class WineService {
   }
 
   searchWBG() {
+    this.PositiveSearchResult = false;
     this.searchResults = [];
     this.searchTerm = this.searchTerm.toLowerCase();
     this.searchTerm = this.stringToArray(this.searchTerm)
@@ -127,17 +130,18 @@ export class WineService {
         console.log("positive result", this.PositiveSearchTerm)
 
         this.clearSearch()
+        this.PositiveSearchResult = true
         this.router.navigateByUrl('/searchResults')
       } else {
         this.NegativeSearchTerm = this.searchTerm[i]
-
-        console.log("negative result", this.NegativeSearchTerm)
-
         this.noSearchResults = "No search results!"
+
+        console.log(this.noSearchResults, this.NegativeSearchTerm)
+
         this.router.navigateByUrl('/wbgList')
       }
     }))
-  }
+    }
   }
 
   winePreLoad() {
