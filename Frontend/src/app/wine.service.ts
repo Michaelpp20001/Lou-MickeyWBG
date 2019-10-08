@@ -27,9 +27,11 @@ export class WineService {
 
   filterWords: any = ["the", "a", "an", "and", ",", ":", ";"];
 
-  searchTerm: string = "";
+  searchTerm: any;
 
-  finalizedSearchTerm: string = "";
+  PositiveSearchTerm: any;
+
+  NegativeSearchTerm: any;
 
   searchResults: any = [];
 
@@ -60,7 +62,7 @@ export class WineService {
   }
 
   stringToArray(str) {
-    return str.trim().split(" ")
+    return str.replace(/([,.])/g,"").trim().split(" ");
   }
 
   uploadNewWine() {
@@ -102,28 +104,40 @@ export class WineService {
   }
 
   searchWBG() {
+    this.searchResults = [];
     this.searchTerm = this.searchTerm.toLowerCase();
+    this.searchTerm = this.stringToArray(this.searchTerm)
+
+    console.log("string to array search term", this.searchTerm)
+
+    for (let i = 0; i < this.searchTerm.length; i++) {
+
     //filtering search term through the backend "keywords" array
-    this.http.get(this.baseUrl + "?filter[where][keywords]=" + this.searchTerm)
+    this.http.get(this.baseUrl + "?filter[where][keywords]=" + this.searchTerm[i])
     .subscribe((response => {
 
-      console.log(response)
+      console.log("search results for", this.searchTerm[i], response)
 
       //setting search response to search results and navigating to either component view
       //seperate page for search results or staying on wbg list
       this.searchResults = response
       if(this.searchResults[0]) {
-        this.finalizedSearchTerm = this.searchTerm
-        this.searchTerm = ""
+        this.PositiveSearchTerm = this.searchTerm[i]
+        
+        console.log("positive result", this.PositiveSearchTerm)
+
         this.clearSearch()
         this.router.navigateByUrl('/searchResults')
       } else {
-        this.finalizedSearchTerm = this.searchTerm
-        this.searchTerm = ""
+        this.NegativeSearchTerm = this.searchTerm[i]
+
+        console.log("negative result", this.NegativeSearchTerm)
+
         this.noSearchResults = "No search results!"
         this.router.navigateByUrl('/wbgList')
       }
     }))
+  }
   }
 
   winePreLoad() {
