@@ -67,6 +67,17 @@ export class WineService {
     return str.replace(/([,.])/g,"").trim().split(" ");
   }
 
+  concatArray(array, array2) {
+     const concatArray = array.concat(array2)
+     this.searchResults = concatArray
+  }
+
+  filterArray(concatedArray) {
+    const mySet = new Set(concatedArray)
+    console.log("my set", [...mySet])
+    this.searchResults = [...mySet]
+  }
+
   uploadNewWine() {
     //post a new wine to the backend
     //and clear out remaining inputs in view and storage methods
@@ -123,20 +134,20 @@ export class WineService {
 
       //setting search response to search results and navigating to either component view
       //seperate page for search results or staying on wbg list
-      this.searchResults = response
+      this.concatArray(this.searchResults, response)
       if(this.searchResults[0]) {
-        this.PositiveSearchTerm = this.searchTerm[i]
+        this.PositiveSearchTerm = this.searchTerm
         
-        console.log("positive result", this.PositiveSearchTerm)
+        console.log("positive result", this.PositiveSearchTerm, "search results concated", this.searchResults)
 
         this.clearSearch()
         this.PositiveSearchResult = true
         this.router.navigateByUrl('/searchResults')
       } else {
-        this.NegativeSearchTerm = this.searchTerm[i]
+        this.NegativeSearchTerm = this.searchTerm
         this.noSearchResults = "No search results!"
 
-        console.log(this.noSearchResults, this.NegativeSearchTerm)
+        console.log(this.noSearchResults, this.NegativeSearchTerm, "search results concated", this.searchResults)
 
         this.router.navigateByUrl('/wbgList')
       }
