@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { forkJoin } from 'rxjs';
-import { access } from 'fs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,35 +11,21 @@ export class WineService {
   constructor(private http: HttpClient, private router: Router) { }
 
   baseUrl: string = "http://localhost:3000/wbgs";
-
   selectedFile: any = {
     labelImage: "",
   };
-
   allWbg: any;
-
   sparklingWine: any = [];
-
   whiteWine: any = [];
-
   redWine: any = [];
-
   keywords: any = [];
-
   filterWords: any = ["the", "a", "an", "and", ",", ":", ";"];
-
   searchTerm: any;
-
   PositiveSearchTerm: any;
-
   PositiveSearchResult: boolean = false;
-
   NegativeSearchTerm: any;
-
   searchResults: any = [];
-
   noSearchResults: string = "";
-
   newWine: any = {
       category: "",
       name: "",
@@ -129,8 +114,17 @@ export class WineService {
     return forkJoin(reqs)
     .subscribe(
       (response: [] []) => {
-        this.searchResults = response
-        console.log(response)
+        //taking the response arrays and concating together
+        this.searchResults = response.reduce((acc, curr) => acc.concat(curr), [])
+
+        console.log("search results after forkJoin", this.searchResults)
+
+        //filter the joined arrays to remove duplicate objects
+        this.searchResults = this.searchResults.filter((thing, index, self) => 
+          index === self.findIndex((t) => (
+            t.id === thing.id
+          )))
+          console.log("search results after filter", this.searchResults)
       }
       )
   }
