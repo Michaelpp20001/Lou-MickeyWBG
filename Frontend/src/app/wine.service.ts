@@ -125,6 +125,23 @@ export class WineService {
             t.id === thing.id
           )))
           console.log("search results after filter", this.searchResults)
+
+          if(this.searchResults[0]) {
+            this.PositiveSearchTerm = this.searchTerm
+
+            console.log("positive result", this.PositiveSearchTerm)
+
+            this.clearSearch()
+            this.PositiveSearchResult = true
+            this.router.navigateByUrl('/searchResults')
+          } else {
+            this.NegativeSearchTerm = this.searchTerm
+            this.noSearchResults = "No search results"
+
+            console.log(this.noSearchResults, this.NegativeSearchTerm)
+
+            this.router.navigateByUrl('/wbgList')
+          }
       }
       )
   }
