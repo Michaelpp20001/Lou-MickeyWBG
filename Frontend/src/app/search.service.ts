@@ -48,8 +48,22 @@ export class SearchService {
 
         console.log("search results after forkJoin", this.searchResults)
 
-        //filter the joined arrays to remove duplicate objects
-        this.searchResults = this.searchResults.filter((obj, index, self) => 
+          //filter to keep only the duplicates (better for search)
+          const sortedResults = []
+          const sortedArray = this.searchResults.sort((a, b) => (a.id > b.id) ? 1 : -1)
+
+          console.log("sorted array", sortedArray)
+          
+          for (let i = 0; i < sortedArray.length - 1; i++) {
+            if(sortedArray[i + 1].id == sortedArray[i].id) {
+              sortedResults.push(sortedArray[i])
+            }
+          }
+          console.log("sorted results", sortedResults)
+          this.searchResults = sortedResults
+
+          //filter the sorted arrays to remove duplicate objects
+          this.searchResults = this.searchResults.filter((obj, index, self) => 
           index === self.findIndex((index) => (
             index.id === obj.id
           )))
