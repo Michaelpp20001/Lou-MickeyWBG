@@ -1,0 +1,78 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { forkJoin } from 'rxjs';
+import { WineService } from './wine.service';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class SearchService {
+
+  constructor(private _wine: WineService, private http: HttpClient, private router: Router) { }
+
+  searchTerm: any;
+  PositiveSearchTerm: any;
+  PositiveSearchResult: boolean = false;
+  NegativeSearchTerm: any;
+  searchResults: any = [];
+  noSearchResults: string = "";
+  baseUrl: string = "http://localhost:3000/wbgs";
+
+  stringToArray(str) {
+    return str.replace(/([,.])/g,"").trim().split(" ");
+  }
+
+  clearSearch() {
+    this.noSearchResults = "";
+    this.searchTerm = "";
+    this._wine.clearWbgInputs;
+    sessionStorage.clear();
+  }
+
+  searchWBG() {
+    this.PositiveSearchResult = false;
+    this.searchResults = [];
+    this.searchTerm = this.searchTerm.toLowerCase();
+    this.searchTerm = this.stringToArray(this.searchTerm)
+
+    console.log("string to array search term", this.searchTerm)
+
+    //filtering search term through the backend "keywords" array
+    const reqs = this.searchTerm.map(term => this.http.get(`${this.baseUrl}?filter[where][keywords]=${term}`))
+    return forkJoin(reqs)
+    .subscribe(
+      (response: [] []) => {
+        //taking the response arrays and concatenating together
+        this.searchResults = response.reduce((acc, curr) => acc.concat(curr), [])
+
+        console.log("search results after forkJoin", this.searchResults)
+
+        //filter the joined arrays to remove duplicate objects
+        this.searchResults = this.searchResults.filter((obj, index, self) => 
+          index === self.findIndex((index) => (
+            index.id === obj.id
+          )))
+          console.log("search results after filter", this.searchResults)
+
+          if(this.searchResults[0]) {
+            this.PositiveSearchTerm = this.searchTerm
+
+            console.log("positive result", this.PositiveSearchTerm)
+
+            this.clearSearch()
+            this.PositiveSearchResult = true
+            this.router.navigateByUrl('/searchResults')
+          } else {
+            this.NegativeSearchTerm = this.searchTerm
+            this.noSearchResults = "No search results"
+            this.searchTerm = ""
+
+            console.log(this.noSearchResults, this.NegativeSearchTerm)
+
+            this.router.navigateByUrl('/wbgList')
+          }
+      }
+      )
+  }
+}

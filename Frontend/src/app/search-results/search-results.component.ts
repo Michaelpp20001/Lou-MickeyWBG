@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WineService } from '../wine.service';
+import { SearchService } from '../search.service';
 
 @Component({
   selector: 'app-search-results',
@@ -8,7 +9,7 @@ import { WineService } from '../wine.service';
 })
 export class SearchResultsComponent implements OnInit {
 
-  constructor(private _wine: WineService) { }
+  constructor(private _wine: WineService, private _search: SearchService) { }
 
   ngOnInit() {
   }

@@ -5,27 +5,27 @@
 
 <div class="navbar">
   <div class="navlink">
-    <a (click)="this._wine.clearSearch()" [routerLink] = "'/wbgList'">
+    <a (click)="this._search.clearSearch()" [routerLink] = "'/wbgList'">
       All WBG
     </a>
   </div>
   <div class="navlink">
-    <a (click)="this._wine.clearSearch()" [routerLink] = "'/redWine'">
+    <a (click)="this._search.clearSearch()" [routerLink] = "'/redWine'">
       Red Wine
     </a>
   </div>
   <div class="navlink">
-    <a (click)="this._wine.clearSearch()" [routerLink] = "'/whiteWine'">
+    <a (click)="this._search.clearSearch()" [routerLink] = "'/whiteWine'">
       White Wine
     </a>
   </div>
   <div class="navlink">
-    <a (click)="this._wine.clearSearch()" [routerLink] = "'/sparklingWine'">
+    <a (click)="this._search.clearSearch()" [routerLink] = "'/sparklingWine'">
       Sparkling Wine
     </a>
   </div>
   <div class="navlink">
-    <a (click)="this._wine.clearSearch()" [routerLink] = "'/newWBG'">
+    <a (click)="this._search.clearSearch()" [routerLink] = "'/newWBG'">
       Add New WBG
     </a>
   </div>
@@ -33,12 +33,12 @@
 
 <div class="wrap">
   <div class="search">
-     <input [(ngModel)]="this._wine.searchTerm" type="text" class="searchTerm" placeholder="What are you looking for?">
+     <input [(ngModel)]="this._search.searchTerm" (keyup.enter)="_search.searchWBG()" type="text" class="searchTerm" placeholder="What are you looking for?">
      <button (click)="onSearchWBG()" type="submit" class="searchButton">
       Go
     </button>
   </div>
 </div>
-<p *ngIf="this._wine.noSearchResults">No results for "{{this._wine.NegativeSearchTerm}}"!</p>
+<p *ngIf="this._search.noSearchResults">No results for "{{this._search.NegativeSearchTerm}}"!</p>
 
 <router-outlet></router-outlet>

@@ -12,6 +12,7 @@ import { SparklingWineComponent } from './sparkling-wine/sparkling-wine.componen
 import { NewWbgComponent } from './new-wbg/new-wbg.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { WineService } from './wine.service';
+import { SearchService } from './search.service'
 import { UpdateWbgComponent } from './update-wbg/update-wbg.component';
 
 @NgModule({
@@ -32,7 +33,8 @@ import { UpdateWbgComponent } from './update-wbg/update-wbg.component';
     FormsModule
   ],
   providers: [
-    WineService
+    WineService,
+    SearchService
   ],
   bootstrap: [AppComponent]
 })

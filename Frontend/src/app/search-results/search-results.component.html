@@ -1,7 +1,7 @@
-<p *ngIf="this._wine.searchResults">Search results matching "{{this._wine.PositiveSearchTerm}}"!</p>
-<div *ngIf="this._wine.searchResults">
+<p *ngIf="this._search.searchResults">Search results matching "{{this._search.PositiveSearchTerm}}"!</p>
+<div *ngIf="this._search.searchResults">
     <div class="container">
-        <div class="wine" *ngFor="let wine of this._wine.searchResults">
+        <div class="wine" *ngFor="let wine of this._search.searchResults">
             <div class="labelImage">
             <img src="{{wine.labelImage}}" alt="wine labelImage"><br>
             </div>
