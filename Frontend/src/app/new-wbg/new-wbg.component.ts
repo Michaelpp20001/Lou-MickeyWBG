@@ -19,10 +19,7 @@ export class NewWbgComponent implements OnInit {
     let file = event.target.files[0];
     let reader = new FileReader();
     sessionStorage.clear();
-    reader.onload = function() {
-
-      console.log('Result of selected image to Base64 Conversion', reader.result)
-
+    reader.onload = () => {
       let convertedBase64Image = reader.result.toString();
       sessionStorage.setItem("base64Image", convertedBase64Image);
     };

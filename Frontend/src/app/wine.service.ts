@@ -46,23 +46,11 @@ export class WineService {
   };
 
   filterKeywords(arr) {
-    let result = arr.filter(word => !this.filterWords.includes(word))
-    this.keywords = result
+    this.keywords = arr.filter(word => !this.filterWords.includes(word))
   }
 
   stringToArray(str) {
     return str.replace(/([,.])/g,"").trim().split(" ");
-  }
-
-  concatArray(array, array2) {
-     const concatArray = array.concat(array2)
-     this.searchResults = concatArray
-  }
-
-  filterArray(concatedArray) {
-    const mySet = new Set(concatedArray)
-    console.log("my set", [...mySet])
-    this.searchResults = [...mySet]
   }
 
   uploadNewWine() {
@@ -71,7 +59,9 @@ export class WineService {
     this.winePreLoad();
     this.http.post(this.baseUrl, this.newWine)
     .subscribe(response => {
-      console.log(response);
+
+      console.log("New Wine", response);
+
       sessionStorage.clear();
       this.clearWbgInputs();
       this.getAllWbg();
@@ -107,22 +97,20 @@ export class WineService {
 
     console.log("string to array search term", this.searchTerm)
 
-    //for (let i = 0; i < this.searchTerm.length; i++) {
-
     //filtering search term through the backend "keywords" array
-    const reqs = this.searchTerm.map(term => this.http.get(this.baseUrl + "?filter[where][keywords]=" + term))
+    const reqs = this.searchTerm.map(term => this.http.get(`${this.baseUrl}?filter[where][keywords]=${term}`))
     return forkJoin(reqs)
     .subscribe(
       (response: [] []) => {
-        //taking the response arrays and concating together
+        //taking the response arrays and concatenating together
         this.searchResults = response.reduce((acc, curr) => acc.concat(curr), [])
 
         console.log("search results after forkJoin", this.searchResults)
 
         //filter the joined arrays to remove duplicate objects
-        this.searchResults = this.searchResults.filter((thing, index, self) => 
-          index === self.findIndex((t) => (
-            t.id === thing.id
+        this.searchResults = this.searchResults.filter((obj, index, self) => 
+          index === self.findIndex((index) => (
+            index.id === obj.id
           )))
           console.log("search results after filter", this.searchResults)
 
@@ -146,61 +134,17 @@ export class WineService {
       )
   }
 
-      //setting search response to search results and navigating to either component view
-      //seperate page for search results or staying on wbg list
-      //this.concatArray(this.searchResults, response)
-      //if(this.searchResults[0]) {
-       // this.PositiveSearchTerm = this.searchTerm
-        
-        //console.log("positive result", this.PositiveSearchTerm, "search results concated", this.searchResults)
-
-        //this.clearSearch()
-        //this.PositiveSearchResult = true
-        //this.router.navigateByUrl('/searchResults')
-      //} else {
-        //this.NegativeSearchTerm = this.searchTerm
-        //this.noSearchResults = "No search results!"
-
-        //console.log(this.noSearchResults, this.NegativeSearchTerm, "search results concated", this.searchResults)
-
-        //this.router.navigateByUrl('/wbgList')
-      //}
-    //}))
-    //} for loop ending curlies
-  //}
-
   winePreLoad() {
     //retrieving label image base64 from session storage and 
     //setting to new wine label image for upload
     let wine = this.newWine;
-    let space = " ";
     wine.labelImage = sessionStorage.getItem("base64Image");
     //taking all inputs from new wbg/upadate wine component and creating a keywords array
-    this.keywords = this.keywords + space +
-    wine.category + space +
-    wine.name + space +
-    wine.producer + space +
-    wine.grape + space +
-    wine.country + space +
-    wine.region + space +
-    wine.subRegion + space +
-    wine.apperance + space +
-    wine.nose + space +
-    wine.palate + space +
-    wine.abv + space +
-    wine.wineMakingNotes + space +
-    wine.foodPairings + space +
-    wine.notes + space;
-    this.keywords = this.keywords.toLowerCase()
+    this.keywords = `${this.keywords} ${wine.category} ${wine.name} ${wine.producer} ${wine.grape} ${wine.country} ${wine.region} ${wine.subRegion} ${wine.apperance} ${wine.nose} ${wine.palate} ${wine.abv} ${wine.wineMakingNotes} ${wine.foodPairings} ${wine.notes}`.toLowerCase()
+    this.newWine.keywords = this.stringToArray(this.keywords)
 
-    console.log("to lower case pre array", this.keywords)
-    
-    this.keywords = this.stringToArray(this.keywords)
-    this.filterKeywords(this.keywords)
+    console.log("filtered keywords array", this.newWine.keywords)
 
-    console.log("filtered keywords array", this.keywords)
-
-    this.newWine.keywords = this.keywords
   }
 
   selectWine(wine) {
