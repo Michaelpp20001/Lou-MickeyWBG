@@ -9,18 +9,19 @@
                 <div class="nameTitle">
                     {{wine.name}}
                 </div>
-            <strong>Producer:</strong> {{wine.producer}}<br>
-            <strong>Grape:</strong> {{wine.grape}}<br>
-            <strong>Country:</strong> {{wine.country}}<br>
-            <strong>Region:</strong> {{wine.region}}<br>
-            <strong>Sub Region:</strong> {{wine.subRegion}}<br>
-            <strong>Appearance:</strong> {{wine.apperance}}<br>
-            <strong>Nose:</strong> {{wine.nose}}<br>
-            <strong>Palate:</strong> {{wine.palate}}<br>
-            <strong>ABV:</strong> {{wine.abv}}<br>
-            <strong>Winemaking Notes:</strong> {{wine.wineMakingNotes}}<br>
-            <strong>Food Pairings:</strong> {{wine.foodPairings}}<br>
-            <strong>Notes:</strong> {{wine.notes}}<br>
+            <div><strong>Producer:</strong> {{wine.producer}}</div>
+            <div>test: {{_search.searchTerm | json}}</div>
+            <div [innerHTML]="wine.grape | highlight: _search.PositiveSearchTerm"><strong>Grape:</strong> {{wine.grape}}</div>
+            <div><strong><span class="highlight-search-text">Country:</span></strong> {{wine.country}}</div>
+            <div><strong>Region:</strong> {{wine.region}}</div>
+            <div><strong>Sub Region:</strong> {{wine.subRegion}}</div>
+            <div><strong>Appearance:</strong> {{wine.apperance}}</div>
+            <div><strong>Nose:</strong> {{wine.nose}}</div>
+            <div><strong>Palate:</strong> {{wine.palate}}</div>
+            <div><strong>ABV:</strong> {{wine.abv}}</div>
+            <div><strong>Winemaking Notes:</strong> {{wine.wineMakingNotes}}</div>
+            <div><strong>Food Pairings:</strong> {{wine.foodPairings}}</div>
+            <div><strong>Notes:</strong> {{wine.notes}}</div>
             </div>
         </div>
     </div>

@@ -33,3 +33,7 @@ img {
 p {
     text-align: center;
 }
+
+.highlight-search-text {
+    background-color: lightblue;
+}

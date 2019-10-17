@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WineService } from '../wine.service';
 import { SearchService } from '../search.service';
+import { HighlightPipe } from './../highlight.pipe'
 
 @Component({
   selector: 'app-search-results',
