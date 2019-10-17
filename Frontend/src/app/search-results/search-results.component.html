@@ -3,14 +3,14 @@
     <div class="container">
         <div class="wine" *ngFor="let wine of this._search.searchResults">
             <div class="labelImage">
-            <img src="{{wine.labelImage}}" alt="wine labelImage"><br>
+                <img src="{{wine.labelImage}}" alt="wine labelImage"><br>
             </div>
             <div class="description">
                 <div class="nameTitle">
                     {{wine.name}}
                 </div>
             <div><strong>Producer:</strong> {{wine.producer}}</div>
-            <div>test: {{_search.searchTerm | json}}</div>
+            <div>test: {{_search.PositiveSearchTerm | json}}</div>
             <div [innerHTML]="wine.grape | highlight: _search.PositiveSearchTerm"><strong>Grape:</strong> {{wine.grape}}</div>
             <div><strong><span class="highlight-search-text">Country:</span></strong> {{wine.country}}</div>
             <div><strong>Region:</strong> {{wine.region}}</div>

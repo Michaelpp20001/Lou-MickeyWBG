@@ -10,8 +10,7 @@ export class HighlightPipe implements PipeTransform {
     if (args.length < 1) { return value;}
     for(const text of args) {
         var reText = new RegExp(text, 'gi');
-        //value = value.replace(reText, "<mark>" + text + "</mark>");
-        //for your custom css
+        //for custom css for the highlighted text
         value = value.replace(reText, "<span class='highlight-search-text'>" + text + "</span>"); 
     }
     console.log(value);
