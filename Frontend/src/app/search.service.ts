@@ -48,7 +48,9 @@ export class SearchService {
 
         console.log("search results after forkJoin", this.searchResults)
 
-          //filter to keep only the duplicates (better for search)
+          if (this.searchTerm.length > 1) {
+            
+          //filter to keep only the duplicates if search term is longer  (better for search)
           const sortedResults = []
           const sortedArray = this.searchResults.sort((a, b) => (a.id > b.id) ? 1 : -1)
 
@@ -61,6 +63,7 @@ export class SearchService {
           }
           console.log("sorted results", sortedResults)
           this.searchResults = sortedResults
+        }
 
           //filter the sorted arrays to remove duplicate objects
           this.searchResults = this.searchResults.filter((obj, index, self) => 
