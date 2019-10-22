@@ -6,14 +6,14 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 export class HighlightPipe implements PipeTransform {
   transform(value: any, args: any): any {
-    console.log(args);
+    //console.log(args);
     if (args.length < 1) { return value;}
     for(const text of args) {
         var reText = new RegExp(text, 'gi');
         //for custom css for the highlighted text
         value = value.replace(reText, "<span class='highlight-search-text'>" + text + "</span>"); 
     }
-    console.log(value);
+    //console.log(value);
     return value;
 }
 }

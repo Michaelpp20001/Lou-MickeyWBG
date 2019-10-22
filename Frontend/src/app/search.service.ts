@@ -13,6 +13,7 @@ export class SearchService {
 
   searchTerm: any;
   PositiveSearchTerm: any;
+  htmlPositiveSearchTerm: any;
   PositiveSearchResult: boolean = false;
   NegativeSearchTerm: any;
   searchResults: any = [];
@@ -33,8 +34,8 @@ export class SearchService {
   searchWBG() {
     this.PositiveSearchResult = false;
     this.searchResults = [];
-    this.searchTerm = this.searchTerm.toLowerCase();
-    this.searchTerm = this.stringToArray(this.searchTerm)
+    let myTerm = this.searchTerm.toLowerCase();
+    this.searchTerm = this.stringToArray(myTerm)
 
     console.log("string to array search term", this.searchTerm)
 
@@ -74,14 +75,15 @@ export class SearchService {
 
           if(this.searchResults[0]) {
             this.PositiveSearchTerm = this.searchTerm
+            this.htmlPositiveSearchTerm = this.searchTerm.toString().replace(/,/g, ' ')
 
-            console.log("positive result", this.PositiveSearchTerm)
+            console.log("positive result", this.PositiveSearchTerm, "array to string", this.htmlPositiveSearchTerm)
 
             this.clearSearch()
             this.PositiveSearchResult = true
             this.router.navigateByUrl('/searchResults')
           } else {
-            this.NegativeSearchTerm = this.searchTerm
+            this.NegativeSearchTerm = this.searchTerm.toString().replace(/,/g, ' ')
             this.noSearchResults = "No search results"
             this.searchTerm = ""
 
