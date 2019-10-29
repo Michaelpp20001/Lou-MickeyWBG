@@ -2,7 +2,19 @@
     display: flex;
 }
 
+.formContainer {
+    flex-direction: column;
+}
+
+.category {
+    display: flex;
+}
+
 img {
     max-height: 200px;
     max-width: 200px;
+}
+
+h1 {
+    text-align: center;
 }
