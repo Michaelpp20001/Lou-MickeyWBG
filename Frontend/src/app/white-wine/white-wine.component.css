@@ -29,3 +29,12 @@ img {
 .description {
     min-width: 80%;
 }
+
+.wrapper {
+    display: flex;
+}
+
+.attribute {
+    font-weight: 900;
+
+}

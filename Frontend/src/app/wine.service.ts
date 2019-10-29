@@ -19,7 +19,7 @@ export class WineService {
   redWine: any = [];
   keywords: any = [];
   filterWords: any = ["the", "a", "an", "and", ",", ":", ";"];
-  newWine: any = {
+  newWine = {
       category: "",
       name: "",
       producer: "",
@@ -37,6 +37,7 @@ export class WineService {
       labelImage: "",
       keywords: [],
   };
+
 
   filterKeywords(arr) {
     this.keywords = arr.filter(word => !this.filterWords.includes(word))

@@ -36,7 +36,11 @@ p {
 
 .myPipeDivParent {
     display: flex;
+
 }
 
+.attribute {
+    font-weight: 900;
+}
 .myPipeDivChild {
 }
