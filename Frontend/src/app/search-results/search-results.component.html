@@ -4,84 +4,84 @@
 <div *ngIf="this._search.searchResults">
     <div class="container">
         <div class="wine" *ngFor="let wine of this._search.searchResults">
-            <div class="labelImage">
-                <img src="{{wine.labelImage}}" alt="wine labelImage"><br>
-            </div>
-            <div class="description">
-                <div class="nameTitle">
-                    {{wine.name}}
+            <div class="nameTitle">{{wine.name}}</div>
+                <div class="wineContainer">
+                    <div class="labelImage">
+                        <img src="{{wine.labelImage}}" alt="wine labelImage"><br>
+                    </div>
+                    <div class="description">
+                    <div class="myPipeDivParent">
+                        <div class="attribute">Producer:</div>
+                        <div class="myPipeDivChild" [innerHTML]="wine.producer | highlight: _search.PositiveSearchTerm"> 
+                            {{wine.producer}}
+                        </div>
+                    </div>
+                    <div class="myPipeDivParent">
+                        <div class="attribute">Grape:</div>
+                        <div class="myPipeDivChild" [innerHTML]="wine.grape | highlight: _search.PositiveSearchTerm"> 
+                            {{wine.grape}}
+                        </div>
+                    </div>
+                    <div class="myPipeDivParent">
+                        <div class="attribute">Country:</div>
+                        <div class="myPipeDivChild" [innerHTML]="wine.country | highlight: _search.PositiveSearchTerm">
+                            {{wine.country}}
+                        </div>
+                    </div>
+                    <div class="myPipeDivParent"><strong>Region:</strong>
+                        <div class="myPipeDivChild" [innerHTML]="wine.region | highlight: _search.PositiveSearchTerm">
+                        {{wine.region}}
+                        </div>
+                    </div>
+                    <div class="myPipeDivParent">
+                        <div class="attribute">Sub Region:</div>
+                        <div class="myPipeDivChild" [innerHTML]="wine.subRegion | highlight: _search.PositiveSearchTerm">
+                        {{wine.subRegion}}
+                        </div>
+                    </div>
+                    <div class="myPipeDivParent">
+                        <div class="attribute">Appearance:</div>
+                        <div class="myPipeDivChild" [innerHTML]="wine.apperance | highlight: _search.PositiveSearchTerm">
+                        {{wine.apperance}}
+                        </div>
+                    </div>
+                    <div class="myPipeDivParent">
+                        <div class="attribute">Nose:</div>
+                        <div class="myPipeDivChild" [innerHTML]="wine.nose | highlight: _search.PositiveSearchTerm">
+                        {{wine.nose}}
+                        </div>
+                    </div>
+                    <div class="myPipeDivParent">
+                        <div class="attribute">Palate:</div>
+                        <div class="myPipeDivChild" [innerHTML]="wine.palate | highlight: _search.PositiveSearchTerm">
+                        {{wine.palate}}
+                        </div>
+                    </div>
+                    <div class="myPipeDivParent">
+                        <div class="attribute">ABV:</div>
+                        <div class="myPipeDivChild" [innerHTML]="wine.abv | highlight: _search.PositiveSearchTerm">
+                        {{wine.abv}}
+                        </div>
+                    </div>
+                    <div class="myPipeDivParent">
+                        <div class="attribute">Winemaking Notes:</div>
+                        <div class="myPipeDivChild" [innerHTML]="wine.wineMakingNotes | highlight: _search.PositiveSearchTerm">
+                        {{wine.wineMakingNotes}}
+                        </div>
+                    </div>
+                    <div class="myPipeDivParent">
+                        <div class="attribute">Food Pairings:</div>
+                        <div class="myPipeDivChild" [innerHTML]="wine.foodPairings | highlight: _search.PositiveSearchTerm">
+                        {{wine.foodPairings}}
+                        </div>
+                    </div>
+                    <div class="myPipeDivParent">
+                        <div class="attribute">Notes:</div>
+                        <div class="myPipeDivChild" [innerHTML]="wine.notes | highlight: _search.PositiveSearchTerm">
+                        {{wine.notes}}
+                        </div>
+                    </div>
                 </div>
-            <div class="myPipeDivParent">
-                <div class="attribute">Producer:</div>
-                <div class="myPipeDivChild" [innerHTML]="wine.producer | highlight: _search.PositiveSearchTerm"> 
-                    {{wine.producer}}
-                </div>
-            </div>
-            <div class="myPipeDivParent">
-                <div class="attribute">Grape:</div>
-                <div class="myPipeDivChild" [innerHTML]="wine.grape | highlight: _search.PositiveSearchTerm"> 
-                    {{wine.grape}}
-                </div>
-            </div>
-            <div class="myPipeDivParent">
-                <div class="attribute">Country:</div>
-                <div class="myPipeDivChild" [innerHTML]="wine.country | highlight: _search.PositiveSearchTerm">
-                    {{wine.country}}
-                </div>
-            </div>
-            <div class="myPipeDivParent"><strong>Region:</strong>
-                <div class="myPipeDivChild" [innerHTML]="wine.region | highlight: _search.PositiveSearchTerm">
-                {{wine.region}}
-                </div>
-            </div>
-            <div class="myPipeDivParent">
-                <div class="attribute">Sub Region:</div>
-                <div class="myPipeDivChild" [innerHTML]="wine.subRegion | highlight: _search.PositiveSearchTerm">
-                {{wine.subRegion}}
-                </div>
-            </div>
-            <div class="myPipeDivParent">
-                <div class="attribute">Appearance:</div>
-                <div class="myPipeDivChild" [innerHTML]="wine.apperance | highlight: _search.PositiveSearchTerm">
-                {{wine.apperance}}
-                </div>
-            </div>
-            <div class="myPipeDivParent">
-                <div class="attribute">Nose:</div>
-                <div class="myPipeDivChild" [innerHTML]="wine.nose | highlight: _search.PositiveSearchTerm">
-                {{wine.nose}}
-                </div>
-            </div>
-            <div class="myPipeDivParent">
-                <div class="attribute">Palate:</div>
-                <div class="myPipeDivChild" [innerHTML]="wine.palate | highlight: _search.PositiveSearchTerm">
-                {{wine.palate}}
-                </div>
-            </div>
-            <div class="myPipeDivParent">
-                <div class="attribute">ABV:</div>
-                <div class="myPipeDivChild" [innerHTML]="wine.abv | highlight: _search.PositiveSearchTerm">
-                {{wine.abv}}
-                </div>
-            </div>
-            <div class="myPipeDivParent">
-                <div class="attribute">Winemaking Notes:</div>
-                <div class="myPipeDivChild" [innerHTML]="wine.wineMakingNotes | highlight: _search.PositiveSearchTerm">
-                {{wine.wineMakingNotes}}
-                </div>
-            </div>
-            <div class="myPipeDivParent">
-                <div class="attribute">Food Pairings:</div>
-                <div class="myPipeDivChild" [innerHTML]="wine.foodPairings | highlight: _search.PositiveSearchTerm">
-                {{wine.foodPairings}}
-                </div>
-            </div>
-            <div class="myPipeDivParent">
-                <div class="attribute">Notes:</div>
-                <div class="myPipeDivChild" [innerHTML]="wine.notes | highlight: _search.PositiveSearchTerm">
-                {{wine.notes}}
-                </div>
-            </div>
             </div>
         </div>
     </div>

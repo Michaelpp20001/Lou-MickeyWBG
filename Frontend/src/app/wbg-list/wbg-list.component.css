@@ -10,14 +10,16 @@ img {
 }
 
 .wine {
-    display: flex;
     padding: 10px;
+}
+
+.wineContainer {
+    display: flex;
 }
 
 .labelImage {
     min-width: 20%;
     text-align: center;
-    padding-top: 3%;
 }
 
 .nameTitle {

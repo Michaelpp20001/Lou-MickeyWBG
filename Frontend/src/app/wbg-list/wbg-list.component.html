@@ -1,62 +1,62 @@
 <div *ngIf="this._wine.allWbg">
     <div class="container">
         <div class="wine" *ngFor="let wine of this._wine.allWbg">
-            <div class="labelImage">
-                <img src="{{wine.labelImage}}" alt="wine labelImage"><br>
-            </div>
-            <div class="description">
-                <div class="nameTitle">
-                    {{wine.name}}
+            <div class="nameTitle">{{wine.name}}</div>
+                <div class="wineContainer">
+                    <div class="labelImage">
+                        <img src="{{wine.labelImage}}" alt="wine labelImage"><br>
+                    </div>
+                    <div class="description">
+                        <div class="wrapper">
+                            <div class="attribute">Producer:</div>
+                            <div class="value">{{wine.producer}}</div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="attribute">Grape:</div>
+                            <div class="value">{{wine.grape}}</div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="attribute">Country:</div>
+                            <div class="value">{{wine.country}}</div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="attribute">Region:</div>
+                            <div class="value">{{wine.region}}</div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="attribute">Sub Region:</div>
+                            <div class="value">{{wine.subRegion}}</div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="attribute">Appearance:</div>
+                            <div class="value">{{wine.apperance}}</div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="attribute">Nose:</div>
+                            <div class="value">{{wine.nose}}</div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="attribute">Palate:</div>
+                            <div class="value">{{wine.palate}}</div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="attribute">ABV:</div>
+                            <div class="value">{{wine.abv}}</div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="attribute">Winemaking Notes:</div>
+                            <div class="value">{{wine.wineMakingNotes}}</div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="attribute">Food Pairings:</div>
+                            <div class="value">{{wine.foodPairings}}</div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="attribute">Notes:</div>
+                            <div class="value">{{wine.notes}}</div>
+                        </div>
+                    <button (click)="this._wine.selectWine(wine)">Update</button>
                 </div>
-            <div class="wrapper">
-                <div class="attribute">Producer:</div>
-                <div class="value">{{wine.producer}}</div>
-            </div>
-            <div class="wrapper">
-                <div class="attribute">Grape:</div>
-                <div class="value">{{wine.grape}}</div>
-            </div>
-            <div class="wrapper">
-                <div class="attribute">Country:</div>
-                <div class="value">{{wine.country}}</div>
-            </div>
-            <div class="wrapper">
-                <div class="attribute">Region:</div>
-                <div class="value">{{wine.region}}</div>
-            </div>
-            <div class="wrapper">
-                <div class="attribute">Sub Region:</div>
-                <div class="value">{{wine.subRegion}}</div>
-            </div>
-            <div class="wrapper">
-                <div class="attribute">Appearance:</div>
-                <div class="value">{{wine.apperance}}</div>
-            </div>
-            <div class="wrapper">
-                <div class="attribute">Nose:</div>
-                <div class="value">{{wine.nose}}</div>
-            </div>
-            <div class="wrapper">
-                <div class="attribute">Palate:</div>
-                <div class="value">{{wine.palate}}</div>
-            </div>
-            <div class="wrapper">
-                <div class="attribute">ABV:</div>
-                <div class="value">{{wine.abv}}</div>
-            </div>
-            <div class="wrapper">
-                <div class="attribute">Winemaking Notes:</div>
-                <div class="value">{{wine.wineMakingNotes}}</div>
-            </div>
-            <div class="wrapper">
-                <div class="attribute">Food Pairings:</div>
-                <div class="value">{{wine.foodPairings}}</div>
-            </div>
-            <div class="wrapper">
-                <div class="attribute">Notes:</div>
-                <div class="value">{{wine.notes}}</div>
-            </div>
-            <button (click)="this._wine.selectWine(wine)">Update</button>
             </div>
         </div>
     </div>
