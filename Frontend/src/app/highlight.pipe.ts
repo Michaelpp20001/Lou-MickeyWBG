@@ -22,17 +22,11 @@ export class HighlightPipe implements PipeTransform {
           startIdxCap = value.indexOf(text[0].toUpperCase() + text.substring(1, text.length))
           endIdx = startIdxCap + textLength
           newWord = value.substring(startIdxCap, endIdx)
-          console.log("start idx Cap", startIdxCap)
-          console.log("endIdx", endIdx)
-          console.log("newword:", newWord)
         }
         else{
           // handle lowercase
           endIdx = startIdx + textLength 
           newWord = value.substring(startIdx, endIdx)
-          console.log("start idx", startIdx)
-          console.log("endIdx", endIdx)
-          console.log("newword:", newWord)
         }
 
         //for custom css for the highlighted text
