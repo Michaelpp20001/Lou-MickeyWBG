@@ -1,13 +1,11 @@
 .container {
     display: flex;
+    justify-content: center;
 }
 
-.formContainer {
-    flex-direction: column;
-}
-
-.category {
+.properties {
     display: flex;
+    
 }
 
 img {

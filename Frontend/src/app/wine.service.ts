@@ -20,6 +20,7 @@ export class WineService {
   keywords: any = [];
   filterWords: any = ["the", "a", "an", "and", ",", ":", ";"];
   newWine = {
+      id: "",
       category: "",
       name: "",
       producer: "",
@@ -123,6 +124,7 @@ export class WineService {
     this.redWine = [];
     this.selectedFile.labelImage = "";
     this.newWine = {
+      id: "",
       category: "",
       name: "",
       producer: "",
