@@ -5,7 +5,11 @@
 
 .properties {
     display: flex;
-    
+    padding-top: 10px;
+}
+
+.category {
+    flex-basis: 30%;
 }
 
 img {
