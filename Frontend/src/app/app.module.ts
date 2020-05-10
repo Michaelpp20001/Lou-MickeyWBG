@@ -15,6 +15,8 @@ import { WineService } from './wine.service';
 import { SearchService } from './search.service'
 import { UpdateWbgComponent } from './update-wbg/update-wbg.component';
 import { HighlightPipe } from './highlight.pipe';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { HighlightPipe } from './highlight.pipe';
     NewWbgComponent,
     SearchResultsComponent,
     UpdateWbgComponent,
-    HighlightPipe
+    HighlightPipe,
+    NavBarComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,22 @@
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    max-width: 300px;
+}
+
+.lou-logo {
+}
+.search-bar {
+    flex-grow: 2;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.link {
+    padding: 10px;
+}

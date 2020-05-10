@@ -1,44 +1,5 @@
-<div class="louLogo">
-  <img src="../assets/LouandMickeys_LOGOS-05.png" alt="Lou and Mickey's logo">
-</div>
+<app-nav-bar></app-nav-bar>
 
-
-<div class="navbar">
-  <div class="navlink">
-    <a (click)="this._search.clearSearch()" [routerLink] = "'/wbgList'">
-      All WBG
-    </a>
-  </div>
-  <div class="navlink">
-    <a (click)="this._search.clearSearch()" [routerLink] = "'/redWine'">
-      Red Wine
-    </a>
-  </div>
-  <div class="navlink">
-    <a (click)="this._search.clearSearch()" [routerLink] = "'/whiteWine'">
-      White Wine
-    </a>
-  </div>
-  <div class="navlink">
-    <a (click)="this._search.clearSearch()" [routerLink] = "'/sparklingWine'">
-      Sparkling Wine
-    </a>
-  </div>
-  <div class="navlink">
-    <a (click)="this._search.clearSearch()" [routerLink] = "'/newWBG'">
-      Add New WBG
-    </a>
-  </div>
-</div>
-
-<div class="wrap">
-  <div class="search">
-     <input [(ngModel)]="this._search.searchTerm" (keyup.enter)="_search.searchWBG()" type="text" class="searchTerm" placeholder="What are you looking for?">
-     <button (click)="onSearchWBG()" type="submit" class="searchButton">
-      Go
-    </button>
-  </div>
-</div>
 <p *ngIf="this._search.noSearchResults">No results for "{{this._search.NegativeSearchTerm}}"!</p>
 
 <router-outlet></router-outlet>

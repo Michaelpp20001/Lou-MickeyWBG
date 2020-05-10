@@ -1,0 +1,35 @@
+<div class="navbar">
+      <div class="lou-logo">
+        <img src="../assets/LouandMickeysLogo2.png" alt="Lou and Mickey's logo">
+      </div>
+      <div class="search-bar">
+        <app-search-bar></app-search-bar>
+      </div>
+      <div class="nav-links">
+        <div class="link">
+          <a (click)="this._search.clearSearch()" [routerLink] = "'/wbgList'">
+            All WBG
+          </a>
+        </div>
+        <div class="link">
+          <a (click)="this._search.clearSearch()" [routerLink] = "'/redWine'">
+            Red Wine
+          </a>
+        </div>
+        <div class="link">
+          <a (click)="this._search.clearSearch()" [routerLink] = "'/whiteWine'">
+            White Wine
+          </a>
+        </div>
+        <div class="link">
+          <a (click)="this._search.clearSearch()" [routerLink] = "'/sparklingWine'">
+            Sparkling Wine
+          </a>
+        </div>
+        <div class="link">
+          <a (click)="this._search.clearSearch()" [routerLink] = "'/newWBG'">
+            Add New WBG
+          </a>
+        </div>
+    </div>
+</div>

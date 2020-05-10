@@ -41,6 +41,7 @@ export class SearchService {
 
     //filtering search term through the backend "keywords" array
     const reqs = this.searchTerm.map(term => this.http.get(`${this.baseUrl}?filter[where][keywords]=${term}`))
+    console.log("reqs pre forkjoin", reqs)
     return forkJoin(reqs)
     .subscribe(
       (response: [] []) => {

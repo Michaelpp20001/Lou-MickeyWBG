@@ -1,0 +1,6 @@
+<div class="search">
+    <input [(ngModel)]="this._search.searchTerm" (keyup.enter)="_search.searchWBG()" type="text" class="searchTerm" placeholder="What are you looking for?">
+    <button (click)="onSearchWBG()" type="submit" class="searchButton">
+        Search
+    </button>
+</div>
