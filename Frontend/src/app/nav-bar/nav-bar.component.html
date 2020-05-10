@@ -5,29 +5,59 @@
       <div class="search-bar">
         <app-search-bar></app-search-bar>
       </div>
-      <div class="nav-links">
-        <div class="link">
-          <a (click)="this._search.clearSearch()" [routerLink] = "'/wbgList'">
+      <div id="nav-links">
+        <div id="link" 
+          [ngClass] = "{'active': this.tab===1}" 
+          (click)="this._search.clearSearch()"
+          (click)= "this.tab=1"
+        >
+          <a (click)="this._search.clearSearch()" 
+          (click)="this.tab=1" 
+          [routerLink] = "'/wbgList'">
             All WBG
           </a>
         </div>
-        <div class="link">
-          <a (click)="this._search.clearSearch()" [routerLink] = "'/redWine'">
+        <div id="link" 
+          [ngClass] = "{'active': this.tab===2}" 
+          (click)="this._search.clearSearch()"
+          (click)= "this.tab=2"
+        >
+          <a (click)="this._search.clearSearch()" 
+          (click)="this.tab=2" 
+          [routerLink] = "'/redWine'">
             Red Wine
           </a>
         </div>
-        <div class="link">
-          <a (click)="this._search.clearSearch()" [routerLink] = "'/whiteWine'">
+        <div id="link"
+          [ngClass] = "{'active': this.tab===3}" 
+          (click)="this._search.clearSearch()"
+          (click)= "this.tab=3"
+        >
+          <a (click)="this._search.clearSearch()" 
+          (click)="this.tab=3" 
+          [routerLink] = "'/whiteWine'">
             White Wine
           </a>
         </div>
-        <div class="link">
-          <a (click)="this._search.clearSearch()" [routerLink] = "'/sparklingWine'">
+        <div id="link" 
+          [ngClass] = "{'active': this.tab===4}" 
+          (click)="this._search.clearSearch()"
+          (click)= "this.tab=4"
+        >
+          <a (click)="this._search.clearSearch()" 
+          (click)="this.tab=4" 
+          [routerLink] = "'/sparklingWine'">
             Sparkling Wine
           </a>
         </div>
-        <div class="link">
-          <a (click)="this._search.clearSearch()" [routerLink] = "'/newWBG'">
+        <div id="link" 
+        [ngClass] = "{'active': this.tab===5}" 
+        (click)="this._search.clearSearch()"
+        (click)= "this.tab=5"
+        >
+          <a (click)="this._search.clearSearch()" 
+          (click)="this.tab=5"
+          [routerLink] = "'/newWBG'">
             Add New WBG
           </a>
         </div>

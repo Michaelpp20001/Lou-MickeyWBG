@@ -1,6 +1,6 @@
 .navbar {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     background-color: #bdb7b8;
 }
 
@@ -9,16 +9,30 @@ img {
 }
 
 .lou-logo {
-    padding: 10px 10px 0px 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .search-bar {
     flex-grow: 2;
+    margin-top: 22px
 }
 
-.nav-links {
+#nav-links {
     display: flex;
+    align-items: stretch;
 }
 
-.link {
-    padding: 10px;
+.active, #link:hover {
+    background-color: #8a8787;
+    color: white;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#link {
+    padding: 32px 10px 32px 10px; 
 }
