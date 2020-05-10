@@ -1,7 +1,7 @@
 .navbar {
     display: flex;
     align-items: stretch;
-    background-color: #bdb7b8;
+    background: #bdb7b8;
 }
 
 img {
@@ -14,7 +14,7 @@ img {
 }
 .search-bar {
     flex-grow: 2;
-    margin-top: 22px
+    margin-top: 19px
 }
 
 #nav-links {
@@ -23,9 +23,10 @@ img {
 }
 
 .active, #link:hover {
-    background-color: #8a8787;
+    background: #8a8787;
     color: white;
     cursor: pointer;
+    transition: 0.6s ease-out;
 }
 
 a {
@@ -34,5 +35,5 @@ a {
 }
 
 #link {
-    padding: 32px 10px 32px 10px; 
+    padding: 32px 10px 32px 10px;
 }
