@@ -1,6 +1,7 @@
 .navbar {
     display: flex;
     align-items: center;
+    background-color: #bdb7b8;
 }
 
 img {
@@ -8,6 +9,7 @@ img {
 }
 
 .lou-logo {
+    padding: 10px 10px 0px 10px;
 }
 .search-bar {
     flex-grow: 2;
