@@ -13,11 +13,10 @@ export class NavBarComponent implements OnInit {
   tab = 1;
 
   ngOnInit() {
-    console.log(this.tab);
   }
 
-  toggleClass() {
-    console.log(this.tab);
+  displayTab(tab) {
+    this.tab = tab;
   }
 
 }

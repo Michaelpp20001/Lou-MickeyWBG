@@ -3,39 +3,36 @@
         <img src="../assets/LouandMickeysLogo2.png" alt="Lou and Mickey's logo">
       </div>
       <div class="search-bar">
-        <app-search-bar></app-search-bar>
+        <app-search-bar (tabEvent)="displayTab($event)"></app-search-bar>
       </div>
       <div id="nav-links">
         <div id="link" 
           [ngClass] = "{'active': this.tab===1}" 
-          (click)="this._search.clearSearch()"
+          (click)= "this._search.clearSearch()"
           (click)= "this.tab=1"
+          [routerLink] = "'/wbgList'"
         >
-          <a (click)="this._search.clearSearch()" 
-          (click)="this.tab=1" 
-          [routerLink] = "'/wbgList'">
+          <a>
             All WBG
           </a>
         </div>
         <div id="link" 
           [ngClass] = "{'active': this.tab===2}" 
-          (click)="this._search.clearSearch()"
+          (click)= "this._search.clearSearch()"
           (click)= "this.tab=2"
+          [routerLink] = "'/redWine'"
         >
-          <a (click)="this._search.clearSearch()" 
-          (click)="this.tab=2" 
-          [routerLink] = "'/redWine'">
+          <a>
             Red Wine
           </a>
         </div>
         <div id="link"
           [ngClass] = "{'active': this.tab===3}" 
-          (click)="this._search.clearSearch()"
+          (click)= "this._search.clearSearch()"
           (click)= "this.tab=3"
+          [routerLink] = "'/whiteWine'"
         >
-          <a (click)="this._search.clearSearch()" 
-          (click)="this.tab=3" 
-          [routerLink] = "'/whiteWine'">
+          <a>
             White Wine
           </a>
         </div>
@@ -43,10 +40,9 @@
           [ngClass] = "{'active': this.tab===4}" 
           (click)="this._search.clearSearch()"
           (click)= "this.tab=4"
+          [routerLink] = "'/sparklingWine'"
         >
-          <a (click)="this._search.clearSearch()" 
-          (click)="this.tab=4" 
-          [routerLink] = "'/sparklingWine'">
+          <a>
             Sparkling Wine
           </a>
         </div>
@@ -54,10 +50,9 @@
         [ngClass] = "{'active': this.tab===5}" 
         (click)="this._search.clearSearch()"
         (click)= "this.tab=5"
+        [routerLink] = "'/newWBG'"
         >
-          <a (click)="this._search.clearSearch()" 
-          (click)="this.tab=5"
-          [routerLink] = "'/newWBG'">
+          <a>
             Add New WBG
           </a>
         </div>

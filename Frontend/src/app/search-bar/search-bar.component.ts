@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output, OnInit } from '@angular/core';
 import { SearchService } from '../search.service';
 
 @Component({
@@ -6,15 +6,19 @@ import { SearchService } from '../search.service';
   templateUrl: './search-bar.component.html',
   styleUrls: ['./search-bar.component.css']
 })
-export class SearchBarComponent implements OnInit {
+export class SearchBarComponent {
 
   constructor(private _search: SearchService) { }
 
-  ngOnInit() {
-  }
+  @Output() tabEvent = new EventEmitter();
   
   onSearchWBG() {
     this._search.searchWBG();
+  }
+
+  changeTabEvent() {
+    const tab = 0;
+    this.tabEvent.emit(tab);
   }
 
 }
