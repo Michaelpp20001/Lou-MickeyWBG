@@ -68,7 +68,7 @@
           </div>
           <ng-template #logout>
           <div id="link"
-            [ngClass] = "{'active': this.tab===6}" 
+            [ngClass] = "{'active': this.tab===0}" 
             (click)= "this._search.clearSearch()"
             (click)= "this._admin.logout()"
             [routerLink] = "'/adminLogin'"

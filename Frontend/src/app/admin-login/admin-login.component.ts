@@ -21,6 +21,7 @@ export class AdminLoginComponent implements OnInit {
     if(form.value.admin == this._admin.admin &&
       form.value.password == this._admin.password) {
       this._admin.loggedIn = true;
+      this._admin.tab = 1;
       this.router.navigate(['/wbgList']);
       form.reset();
     } else {
