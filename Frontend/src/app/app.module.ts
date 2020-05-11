@@ -12,7 +12,8 @@ import { SparklingWineComponent } from './sparkling-wine/sparkling-wine.componen
 import { NewWbgComponent } from './new-wbg/new-wbg.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { WineService } from './wine.service';
-import { SearchService } from './search.service'
+import { SearchService } from './search.service';
+import { AdminService } from './admin.service';
 import { UpdateWbgComponent } from './update-wbg/update-wbg.component';
 import { HighlightPipe } from './highlight.pipe';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -40,7 +41,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
   ],
   providers: [
     WineService,
-    SearchService
+    SearchService,
+    AdminService
   ],
   bootstrap: [AppComponent]
 })
