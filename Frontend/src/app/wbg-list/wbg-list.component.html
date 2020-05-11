@@ -55,7 +55,7 @@
                             <div class="attribute">Notes:</div>
                             <div class="value">{{wine.notes}}</div>
                         </div>
-                    <button (click)="this._wine.selectWine(wine)">Update</button>
+                    <button *ngIf="this._admin.loggedIn === true" (click)="this._wine.selectWine(wine)">Update</button>
                 </div>
             </div>
         </div>

@@ -56,5 +56,14 @@
             Add New WBG
           </a>
         </div>
+        <div id="link" 
+          [ngClass] = "{'active': this.tab===6}" 
+          (click)= "this._search.clearSearch()"
+          (click)= "this.tab=6"
+          [routerLink] = "'/adminLogin'"
+        >
+          <a>
+            Admin Login
+          </a>
     </div>
 </div>

@@ -18,6 +18,7 @@ import { UpdateWbgComponent } from './update-wbg/update-wbg.component';
 import { HighlightPipe } from './highlight.pipe';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     UpdateWbgComponent,
     HighlightPipe,
     NavBarComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,
