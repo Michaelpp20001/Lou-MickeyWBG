@@ -8,8 +8,8 @@
       <div id="nav-links">
         <div id="link" 
           [ngClass] = "{'active': this.tab === 1 || this._admin.tab === 1}" 
-          (click)= "this._search.clearSearch()"
-          (click)= "this.tab=1"
+          (click)= "this._search.clearSearch(); 
+          this.tab=1"
           [routerLink] = "'/wbgList'"
         >
           <a>
@@ -18,8 +18,9 @@
         </div>
         <div id="link" 
           [ngClass] = "{'active': this.tab===2}" 
-          (click)= "this._search.clearSearch()"
-          (click)= "this.tab=2; this._admin.tab = 0"
+          (click)= "this._search.clearSearch(); 
+          this.tab=2; 
+          this._admin.tab = 0"
           [routerLink] = "'/redWine'"
         >
           <a>
@@ -28,8 +29,9 @@
         </div>
         <div id="link"
           [ngClass] = "{'active': this.tab===3}" 
-          (click)= "this._search.clearSearch()"
-          (click)= "this.tab=3; this._admin.tab = 0"
+          (click)= "this._search.clearSearch(); 
+          this.tab=3; 
+          this._admin.tab = 0"
           [routerLink] = "'/whiteWine'"
         >
           <a>
@@ -38,8 +40,9 @@
         </div>
         <div id="link" 
           [ngClass] = "{'active': this.tab===4}"
-          (click)="this._search.clearSearch()"
-          (click)= "this.tab=4; this._admin.tab = 0"
+          (click)="this._search.clearSearch();
+          this.tab=4; 
+          this._admin.tab = 0"
           [routerLink] = "'/sparklingWine'"
         >
           <a>
@@ -48,8 +51,9 @@
         </div>
         <div id="link" 
         [ngClass] = "{'active': this.tab===5}" 
-        (click)="this._search.clearSearch()"
-        (click)= "this.tab=5; this._admin.tab = 0"
+        (click)="this._search.clearSearch(); 
+        this.tab=5; 
+        this._admin.tab = 0"
         [routerLink] = "'/newWBG'"
         >
           <a>
@@ -57,8 +61,9 @@
           </a>
         </div>
         <div *ngIf="!this._admin.loggedIn; else logout" id="link" 
-          (click)= "this._search.clearSearch()"
-          (click)= "this.tab=0; this._admin.tab = 0"
+          (click)= "this._search.clearSearch(); 
+          this.tab=0; 
+          this._admin.tab = 0"
           [routerLink] = "'/adminLogin'"
         >
           <a *ngIf="!this._admin.loggedIn">
@@ -67,8 +72,10 @@
           </div>
           <ng-template #logout>
           <div id="link"
-            (click)= "this._search.clearSearch()"
-            (click)= "this._admin.logout(); this.tab=0; this._admin.tab = 1"
+            (click)= "this._search.clearSearch(); 
+            this._admin.logout(); 
+            this.tab=0; 
+            this._admin.tab = 1"
             [routerLink] = "'/wbgList'"
           >
           <a>
