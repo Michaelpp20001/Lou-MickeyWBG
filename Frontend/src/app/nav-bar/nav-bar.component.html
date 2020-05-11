@@ -56,14 +56,27 @@
             Add New WBG
           </a>
         </div>
-        <div id="link" 
+        <div *ngIf="!this._admin.loggedIn; else logout" id="link" 
           [ngClass] = "{'active': this.tab===6}" 
           (click)= "this._search.clearSearch()"
           (click)= "this.tab=6"
           [routerLink] = "'/adminLogin'"
         >
-          <a>
+          <a *ngIf="!this._admin.loggedIn">
             Admin Login
           </a>
+          </div>
+          <ng-template #logout>
+          <div id="link"
+            [ngClass] = "{'active': this.tab===6}" 
+            (click)= "this._search.clearSearch()"
+            (click)= "this._admin.logout()"
+            [routerLink] = "'/adminLogin'"
+          >
+          <a>
+            Logout
+          </a>
+        </div>
+        </ng-template>
     </div>
 </div>

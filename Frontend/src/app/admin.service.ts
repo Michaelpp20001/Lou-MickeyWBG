@@ -7,7 +7,13 @@ export class AdminService {
 
   constructor() { }
 
-  admin: string = "admin";
-  password: string = "admin";
+  admin = "admin";
+  password = "admin";
+
   loggedIn: boolean = false;
+
+  logout() {
+    this.loggedIn = false;
+  }
+
 }

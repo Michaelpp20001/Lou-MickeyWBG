@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchService } from '../search.service';
+import { AdminService } from '../admin.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,7 +9,7 @@ import { SearchService } from '../search.service';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(private _search: SearchService) { }
+  constructor(private _search: SearchService, private _admin: AdminService) { }
 
   tab = 1;
 

@@ -1,1 +1,23 @@
-<p>admin-login works!</p>
+<div class="container">
+    <div class="card">
+        <div class="background">
+        <img src="../../assets/kingsSeafood.png" alt="Kings Seafood logo" style="width:100%">
+    </div>
+            <div class="title">
+                <h2>Admin Login</h2>
+            </div>
+            <div *ngIf="this.loginError === true" class="error">
+                Incorrect user and/or password!
+            </div>
+            <div class="form">
+                <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+                    <label for="admin">Username: </label>
+                    <input type="text" name="admin" ngModel><br><br>
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" ngModel><br><br>
+                    <button class="btn">Login</button>
+                  </form>
+            </div>
+    </div>
+</div>
+
