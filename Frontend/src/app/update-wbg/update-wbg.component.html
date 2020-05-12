@@ -74,7 +74,8 @@
             <div class="labelImage" *ngIf="this._wine.selectedFile.labelImage">
                 <img src="{{this._wine.selectedFile.labelImage}}" alt="selected labelImage"><br>
             </div>
-        <button type="button" (click)="onUpdateWine()">Submit updated wine</button>
         </div>
+        <button type="button" (click)="onUpdateWine()">Submit updated wine</button><br>
+        <button type="button" (click)="cancel()">Cancel</button>
     </form>
 </div>

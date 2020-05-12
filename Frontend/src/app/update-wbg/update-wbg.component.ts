@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WineService } from '../wine.service';
+import { AdminService } from '../admin.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-update-wbg',
@@ -8,7 +10,11 @@ import { WineService } from '../wine.service';
 })
 export class UpdateWbgComponent implements OnInit {
 
-  constructor(private _wine: WineService) { }
+  constructor(
+    private _wine: WineService,
+    private router: Router,
+    private _admin: AdminService
+    ) { }
 
   onFileSelected(event) {
     //Upload a new label image from file on PC and convert to base64, 
@@ -35,6 +41,31 @@ export class UpdateWbgComponent implements OnInit {
 
   onUpdateWine() {
     this._wine.updateWine();
+  }
+
+  cancel() {
+    this._wine.selectedFile.labelImage = "";
+    this._wine.newWine = {
+        id: "",
+        category: "",
+        name: "",
+        producer: "",
+        grape: "",
+        country: "",
+        region: "",
+        subRegion: "",
+        apperance: "",
+        nose: "",
+        palate: "",
+        abv: "",
+        wineMakingNotes: "",
+        foodPairings: "",
+        notes: "",
+        labelImage: "",
+        keywords: [],
+    }
+    this.router.navigateByUrl('/wbgList');
+    this._admin.tab = 1;
   }
 
   ngOnInit() {
