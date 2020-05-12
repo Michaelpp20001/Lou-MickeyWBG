@@ -19,6 +19,7 @@ import { HighlightPipe } from './highlight.pipe';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { LogoutModalComponent } from './logout-modal/logout-modal.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
     HighlightPipe,
     NavBarComponent,
     SearchBarComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    LogoutModalComponent
   ],
   imports: [
     BrowserModule,

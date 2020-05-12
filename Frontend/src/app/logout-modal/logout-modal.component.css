@@ -1,0 +1,36 @@
+.mmodal {
+    z-index: 1000;
+    position: fixed;
+    top: 250px;
+    left: 35vw;
+    width: 30%;
+    animation: popup 0.5s ease-out;
+}
+
+@keyframes popup {
+    0% {
+        transform: translateY(-300px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.mmodal-body {
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.mmodal-background {
+    z-index: 900;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #919191;
+    opacity: 0.95;
+}

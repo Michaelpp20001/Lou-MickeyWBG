@@ -73,7 +73,8 @@
           <ng-template #logout>
           <div id="link"
             (click)= "this._search.clearSearch(); 
-            this._admin.logout(); 
+            this._admin.logout();
+            this.showDialog();
             this.tab=0; 
             this._admin.tab = 1"
             [routerLink] = "'/wbgList'"
@@ -85,3 +86,9 @@
         </ng-template>
     </div>
 </div>
+<modal id="modal_1" class="hhidden">
+  <div class="modal-content">
+    Admin access has been logged out
+  </div>
+  <button class="modal-btn">Back to WBG</button>
+</modal>
