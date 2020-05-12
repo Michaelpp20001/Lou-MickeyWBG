@@ -52,6 +52,7 @@
         <div id="link" 
         [ngClass] = "{'active': this.tab===5}" 
         (click)="this._search.clearSearch(); 
+        this.clearInputs();
         this.tab=5; 
         this._admin.tab = 0"
         [routerLink] = "'/newWBG'"

@@ -23,7 +23,6 @@ img {
 }
 
 .active, #link:hover {
-    /*background: #8a8787;*/
     background: #ededed;
     color: white;
     cursor: pointer;
@@ -33,7 +32,6 @@ img {
 #link, a {
     padding: 32px 10px 32px 10px;
     text-decoration: none;
-    /*color: white;*/
     color: black;
 }
 
