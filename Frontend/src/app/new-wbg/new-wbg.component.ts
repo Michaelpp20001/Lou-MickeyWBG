@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WineService } from '../wine.service';
+import { AdminService } from  '../admin.service';
 
 @Component({
   selector: 'app-new-wbg',
@@ -8,7 +9,10 @@ import { WineService } from '../wine.service';
 })
 export class NewWbgComponent implements OnInit {
 
-  constructor(private _wine: WineService) { }
+  constructor(
+    private _wine: WineService,
+    private _admin: AdminService
+    ) { }
 
   async onFileSelected(event) {
     //Upload a new label image from file on PC and convert to base64, 
@@ -27,14 +31,10 @@ export class NewWbgComponent implements OnInit {
     reader.readAsDataURL(file);
   }
 
-
-  previewImage() {
-    this._wine.selectedFile.labelImage = sessionStorage.getItem("base64Image");
-  }
-
   onUploadNewWine() {
     this._wine.winePreLoad();
     this._wine.uploadNewWine();
+    this._admin.tab = 1;
   }
 
   ngOnInit() {
