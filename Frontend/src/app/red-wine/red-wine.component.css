@@ -1,42 +1,112 @@
-img {
-    max-height: 200px;
-    max-width: 200px;
+/*below are my refactored syles*/
+.load-container {
+    text-align: center;
+    margin: 4rem;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+.loader {
+    border: 10px solid #bdc3c7;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-top-color: #f0f0f0;
+    border-bottom-color: #f0f0f0;
+    margin: auto;
+    animation: spin 2s linear infinite;
 }
 
-.wine {
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+      100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+.img2 {
+    min-height: 45vh;
+    max-width: 300px;
+    max-height: 45vh;
+}
+
+.label {
+    width: 30vw;
+    text-align: center;
+}
+
+.title {
+    font-family: 'fjalla', sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    line-height: .8;
     padding: 10px;
 }
 
-.wineContainer {
+span {
+    font-family: 'fjalla', sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.descriptors {
     display: flex;
+    justify-content: center;
+    line-height: 1.3;
 }
 
-.labelImage {
-    min-width: 20%;
-    text-align: center;
-}
-
-.nameTitle {
-    font-family: 'aspire', 'arial', sans-serif;
-    text-align: center;
-    font-size: 40px;
-}
-
-.description {
-    min-width: 80%;
-}
-
-.wrapper {
+.button-container {
     display: flex;
+    justify-content: flex-end;
 }
 
-.attribute {
-    font-weight: 900;
+.delete, .update {
+    padding: 5px;
+}
 
+button {
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'roboto', sans-serif;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+    border: none;
+}
+
+#update-btn:hover {
+    background-color: #f7ecab;
+}
+
+#delete-btn:hover {
+    background-color: #ffbfbf;
+}
+
+.properties {
+    width: 70vw;
+}
+
+.key {
+    font-family: 'roboto', sans-serif;
+    text-transform: uppercase;
+    margin-right: 1rem;
+    text-align: right;
+    width: 20%;
+}
+
+.value {
+    font-family: 'roboto', sans-serif;
+    text-align: left;
+    width: 80%;
+}
+
+.wine-2 {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin: 5vh 15vw 0 15vw;
 }
