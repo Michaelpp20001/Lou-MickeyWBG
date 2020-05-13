@@ -1,4 +1,10 @@
 /*below are my refactored syles*/
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 .img2 {
     min-height: 45vh;
     max-width: 300px;
