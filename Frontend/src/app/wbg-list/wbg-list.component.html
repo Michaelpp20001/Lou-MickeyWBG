@@ -9,13 +9,46 @@
             </div>
             <div class="properties">
                 <div class="title">
-                    {{wine.name}}
+                    {{wine.name}}<br>
+                    <span>{{wine.subRegion}}, {{wine.region}}<br></span>
+                    <span>{{wine.country}}</span>
                 </div>
                 <div class="descriptors">
-                    <div class="key">Producer</div>
+                    <div class="key"><span>Palate</span></div>
+                    <div class="value">{{wine.palate}}</div>
+                </div>
+                <div class="descriptors">
+                    <div class="key"><span>Pairings</span></div>
+                    <div class="value">{{wine.foodPairings}}</div>
+                </div>
+                <div class="descriptors">
+                    <div class="key"><span>Nose</span></div>
+                    <div class="value">{{wine.nose}}</div>
+                </div>
+                <div class="descriptors">
+                    <div class="key"><span>Appearance</span></div>
+                    <div class="value">{{wine.apperance}}</div>
+                </div>
+                <div class="descriptors">
+                    <div class="key"><span>Producer</span></div>
                     <div class="value">{{wine.producer}}</div>
                 </div>
-
+                <div class="descriptors">
+                    <div class="key"><span>Grape</span></div>
+                    <div class="value">{{wine.grape}}</div>
+                </div>
+                <div class="descriptors">
+                    <div class="key"><span>ABV</span></div>
+                    <div class="value">{{wine.abv}}</div>
+                </div>
+                <div class="descriptors">
+                    <div class="key"><span>WinemakingNotes</span></div>
+                    <div class="value">{{wine.wineMakingNotes}}</div>
+                </div>
+                <div class="descriptors">
+                    <div class="key"><span>Other Notes</span></div>
+                    <div class="value">{{wine.notes}}</div>
+                </div>
             </div>
         </div>
 
