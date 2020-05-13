@@ -1,61 +1,54 @@
 <div class="container" *ngIf="this._wine.whiteWine">
         <div class="container">
-            <div class="wine" *ngFor="let wine of this._wine.whiteWine">
-                <div class="nameTitle">{{wine.name}}</div>
-                    <div class="wineContainer">
-                        <div class="labelImage">
-                            <img src="{{wine.labelImage}}" alt="wine labelImage"><br>
-                        </div>
-                        <div class="description">
-                            <div class="wrapper">
-                                <div class="attribute">Producer:</div>
-                                <div class="value">{{wine.producer}}</div>
-                            </div>
-                            <div class="wrapper">
-                                <div class="attribute">Grape:</div>
-                                <div class="value">{{wine.grape}}</div>
-                            </div>
-                            <div class="wrapper">
-                                <div class="attribute">Country:</div>
-                                <div class="value">{{wine.country}}</div>
-                            </div>
-                            <div class="wrapper">
-                                <div class="attribute">Region:</div>
-                                <div class="value">{{wine.region}}</div>
-                            </div>
-                            <div class="wrapper">
-                                <div class="attribute">Sub Region:</div>
-                                <div class="value">{{wine.subRegion}}</div>
-                            </div>
-                            <div class="wrapper">
-                                <div class="attribute">Appearance:</div>
-                                <div class="value">{{wine.apperance}}</div>
-                            </div>
-                            <div class="wrapper">
-                                <div class="attribute">Nose:</div>
-                                <div class="value">{{wine.nose}}</div>
-                            </div>
-                            <div class="wrapper">
-                                <div class="attribute">Palate:</div>
-                                <div class="value">{{wine.palate}}</div>
-                            </div>
-                            <div class="wrapper">
-                                <div class="attribute">ABV:</div>
-                                <div class="value">{{wine.abv}}</div>
-                            </div>
-                            <div class="wrapper">
-                                <div class="attribute">Winemaking Notes:</div>
-                                <div class="value">{{wine.wineMakingNotes}}</div>
-                            </div>
-                            <div class="wrapper">
-                                <div class="attribute">Food Pairings:</div>
-                                <div class="value">{{wine.foodPairings}}</div>
-                            </div>
-                            <div class="wrapper">
-                                <div class="attribute">Notes:</div>
-                                <div class="value">{{wine.notes}}</div>
-                            </div>
-                        <button *ngIf="this._admin.loggedIn" (click)="this._wine.selectWine(wine)">Update</button>
+            <div class="wine-2" *ngFor="let wine of this._wine.whiteWine">
+                <div class="label">
+                    <img class="img2" src="{{wine.labelImage}}" alt="label">
+                </div>
+                <div class="properties">
+                    <div class="title">
+                        {{wine.name}}<br>
+                        <span>{{wine.subRegion}}, {{wine.region}}<br></span>
+                        <span>{{wine.country}}</span>
+                    </div>
+                    <div class="descriptors">
+                        <div class="key"><span>Palate</span></div>
+                        <div class="value">{{wine.palate}}</div>
+                    </div>
+                    <div class="descriptors">
+                        <div class="key"><span>Pairings</span></div>
+                        <div class="value">{{wine.foodPairings}}</div>
+                    </div>
+                    <div class="descriptors">
+                        <div class="key"><span>Nose</span></div>
+                        <div class="value">{{wine.nose}}</div>
+                    </div>
+                    <div class="descriptors">
+                        <div class="key"><span>Appearance</span></div>
+                        <div class="value">{{wine.apperance}}</div>
+                    </div>
+                    <div class="descriptors">
+                        <div class="key"><span>Producer</span></div>
+                        <div class="value">{{wine.producer}}</div>
+                    </div>
+                    <div class="descriptors">
+                        <div class="key"><span>Grape</span></div>
+                        <div class="value">{{wine.grape}}</div>
+                    </div>
+                    <div class="descriptors">
+                        <div class="key"><span>ABV</span></div>
+                        <div class="value">{{wine.abv}}</div>
+                    </div>
+                    <div class="descriptors">
+                        <div class="key"><span>WinemakingNotes</span></div>
+                        <div class="value">{{wine.wineMakingNotes}}</div>
+                    </div>
+                    <div class="descriptors">
+                        <div class="key"><span>Other Notes</span></div>
+                        <div class="value">{{wine.notes}}</div>
+                    </div>
+                    <div class="button-container">
+                        <div class="update"><button id="update-btn" *ngIf="this._admin.loggedIn" (click)="this._wine.selectWine(wine)">Update</button></div>
+                        <div class="delete"><button id="delete-btn" *ngIf="this._admin.loggedIn" (click)="this._wine.selectWine(wine)">Delete</button></div>
                     </div>
                 </div>
             </div>
