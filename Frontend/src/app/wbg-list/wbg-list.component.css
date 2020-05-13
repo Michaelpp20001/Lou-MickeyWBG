@@ -1,7 +1,4 @@
-img {
-    max-height: 200px;
-    max-width: 200px;
-}
+
 
 .container {
     display: flex;
@@ -9,37 +6,6 @@ img {
     height: 100vh;
 }
 
-.wine {
-    padding: 10px;
-}
-
-.wineContainer {
-    display: flex;
-}
-
-.labelImage {
-    min-width: 20%;
-    text-align: center;
-}
-
-.nameTitle {
-    font-family: 'aspire', 'arial', sans-serif;
-    text-align: center;
-    font-size: 40px;
-}
-
-.description {
-    min-width: 80%;
-}
-
-.wrapper {
-    display: flex;
-}
-
-.attribute {
-    font-weight: 900;
-
-}
 
 /*below are my refactored syles*/
 .load-container {
@@ -71,6 +37,7 @@ img {
 .img2 {
     min-height: 45vh;
     max-width: 300px;
+    max-height: 45vh;
 }
 
 .label {
