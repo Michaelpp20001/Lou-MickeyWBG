@@ -57,7 +57,9 @@ img {
     display: flex;
     flex-direction: row;
     padding: 10px;
-    margin-left: 15vw;
+    margin: 10vh 15vw 0 15vw;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
 .descriptors {
