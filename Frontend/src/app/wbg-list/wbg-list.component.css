@@ -1,3 +1,28 @@
+.load-container {
+    text-align: center;
+    margin: 4rem;
+}
+
+.loader {
+    border: 10px solid #bdc3c7;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border-top-color: #f0f0f0;
+    border-bottom-color: #f0f0f0;
+    margin: auto;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+      100% {
+      transform: rotate(360deg);
+    }
+  }
+
 img {
     max-height: 200px;
     max-width: 200px;
