@@ -8,7 +8,6 @@ export class MongodbDataSource extends juggler.DataSource {
   constructor(
     @inject('datasources.config.mongodb', {optional: true})
     dsConfig: object = config,
-    useUnifiedTopology: true,
   ) {
     super(dsConfig);
   }

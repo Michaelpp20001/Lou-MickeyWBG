@@ -8,6 +8,7 @@ import { NewWbgComponent } from './new-wbg/new-wbg.component';
 import { SearchResultsComponent } from './search-results/search-results.component';
 import { UpdateWbgComponent } from './update-wbg/update-wbg.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { DeletedWinesComponent } from './deleted-wines/deleted-wines.component';
 
 
 const routes: Routes = [
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'newWBG' , component: NewWbgComponent},
   {path: 'searchResults' , component: SearchResultsComponent},
   {path: 'updateWbg' , component: UpdateWbgComponent},
-  {path: 'adminLogin', component: AdminLoginComponent}
+  {path: 'adminLogin', component: AdminLoginComponent},
+  {path: 'previousWines' , component: DeletedWinesComponent}
 ];
 
 @NgModule({

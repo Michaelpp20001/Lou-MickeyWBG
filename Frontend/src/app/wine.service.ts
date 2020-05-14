@@ -15,10 +15,12 @@ export class WineService {
     ) { }
 
   baseUrl: string = "http://localhost:3000/wbgs";
+  deleteWineUrl: string = "http://localHost:3000/deletedwbgs";
   selectedFile: any = {
     labelImage: "",
   };
   allWbg: any;
+  previousWines: any;
   sparklingWine: any = [];
   whiteWine: any = [];
   redWine: any = [];
@@ -90,6 +92,17 @@ export class WineService {
     });
   }
 
+  getPreviousWines() {
+    //get all Wbg and store to all Wbg variable/update arrays
+    this.http.get(this.deleteWineUrl)
+    .subscribe(response => {
+
+      console.log("All Previous WBG", response);
+
+      this.previousWines = response;
+    });
+  }
+
   winePreLoad() {
     //retrieving label image base64 from session storage and 
     //setting to new wine label image for upload
@@ -122,6 +135,25 @@ export class WineService {
       this.router.navigateByUrl('/wbgList')
       this._admin.tab = 1;
     });
+  }
+
+  deleteWine(wine) {
+    console.log(wine);
+
+    delete wine.id;
+     
+    console.log(wine);
+    
+    this.http.post(this.deleteWineUrl, wine)
+    .subscribe(response => {
+
+      console.log("Wine now in previous wines", response);
+
+      sessionStorage.clear();
+      this.clearWbgInputs();
+      this.getPreviousWines();
+    });
+    this.router.navigateByUrl('/previousWines');
   }
 
   clearWbgInputs() {

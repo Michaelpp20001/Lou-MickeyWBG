@@ -20,6 +20,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { LogoutModalComponent } from './logout-modal/logout-modal.component';
+import { DeletedWinesComponent } from './deleted-wines/deleted-wines.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { LogoutModalComponent } from './logout-modal/logout-modal.component';
     NavBarComponent,
     SearchBarComponent,
     AdminLoginComponent,
-    LogoutModalComponent
+    LogoutModalComponent,
+    DeletedWinesComponent
   ],
   imports: [
     BrowserModule,
