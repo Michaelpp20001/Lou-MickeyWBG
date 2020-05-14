@@ -49,7 +49,7 @@
             Sparkling Wine
           </a>
         </div>
-        <div id="link" 
+        <div *ngIf="this._admin.loggedIn" id="link"
         [ngClass] = "{'active': this.tab===5}" 
         (click)="this._search.clearSearch(); 
         this.clearInputs();

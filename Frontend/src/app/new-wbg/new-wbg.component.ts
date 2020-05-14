@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WineService } from '../wine.service';
 import { AdminService } from  '../admin.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new-wbg',
@@ -11,7 +12,8 @@ export class NewWbgComponent implements OnInit {
 
   constructor(
     private _wine: WineService,
-    private _admin: AdminService
+    private _admin: AdminService,
+    private router: Router
     ) { }
 
   async onFileSelected(event) {
@@ -34,6 +36,31 @@ export class NewWbgComponent implements OnInit {
   onUploadNewWine() {
     this._wine.winePreLoad();
     this._wine.uploadNewWine();
+    this._admin.tab = 1;
+  }
+
+  cancel() {
+    this._wine.selectedFile.labelImage = "";
+    this._wine.newWine = {
+        id: "",
+        category: "",
+        name: "",
+        producer: "",
+        grape: "",
+        country: "",
+        region: "",
+        subRegion: "",
+        apperance: "",
+        nose: "",
+        palate: "",
+        abv: "",
+        wineMakingNotes: "",
+        foodPairings: "",
+        notes: "",
+        labelImage: "",
+        keywords: [],
+    }
+    this.router.navigateByUrl('/wbgList');
     this._admin.tab = 1;
   }
 

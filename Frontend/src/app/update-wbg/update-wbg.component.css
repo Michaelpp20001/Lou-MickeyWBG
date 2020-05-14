@@ -34,6 +34,7 @@ form h1 {
   }
 
 img {
-    max-height: 200px;
-    max-width: 200px;
+    min-height: 45vh;
+    max-width: 300px;
+    max-height: 45vh;
 }
