@@ -21,6 +21,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { LogoutModalComponent } from './logout-modal/logout-modal.component';
 import { DeletedWinesComponent } from './deleted-wines/deleted-wines.component';
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { DeletedWinesComponent } from './deleted-wines/deleted-wines.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    IonicModule.forRoot()
   ],
   providers: [
     WineService,

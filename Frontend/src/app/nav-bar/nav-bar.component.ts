@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SearchService } from '../search.service';
 import { AdminService } from '../admin.service';
 import { WineService } from '../wine.service'; 
+import { TabService } from '../tab.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -13,7 +14,8 @@ export class NavBarComponent implements OnInit {
   constructor(
     private _search: SearchService, 
     private _admin: AdminService,
-    private _wine: WineService
+    private _wine: WineService,
+    private _tab: TabService
     ) { }
 
   tab = 1;
