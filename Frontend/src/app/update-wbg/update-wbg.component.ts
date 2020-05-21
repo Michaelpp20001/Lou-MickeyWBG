@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WineService } from '../wine.service';
 import { AdminService } from '../admin.service';
+import { TabService } from '../tab.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,7 +14,8 @@ export class UpdateWbgComponent implements OnInit {
   constructor(
     private _wine: WineService,
     private router: Router,
-    private _admin: AdminService
+    private _admin: AdminService,
+    private _tab: TabService
     ) { }
 
   onFileSelected(event) {
@@ -38,7 +40,7 @@ export class UpdateWbgComponent implements OnInit {
 
   onUpdateWine() {
     this._wine.updateWine();
-    this._admin.tab = 1;
+    this._tab.currentTab = 1;
   }
 
   cancel() {
@@ -63,7 +65,7 @@ export class UpdateWbgComponent implements OnInit {
         keywords: [],
     }
     this.router.navigateByUrl('/wbgList');
-    this._admin.tab = 1;
+    this._tab.currentTab = 1;
   }
 
   ngOnInit() {
