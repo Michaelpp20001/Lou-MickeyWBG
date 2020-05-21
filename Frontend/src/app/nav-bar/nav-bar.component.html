@@ -46,18 +46,6 @@
             Sparkling Wine
           </a>
         </div>
-        <div *ngIf="this._admin.loggedIn" 
-          id="link"
-          [ngClass] = "{'active': this._tab.currentTab===5}" 
-          (click)="this._search.clearSearch(); 
-          this.clearInputs();
-          this._tab.currentTab=5"
-          [routerLink] = "'/newWBG'"
-        >
-          <a>
-            Add New WBG
-          </a>
-        </div>
         <div *ngIf="!this._admin.loggedIn; else logout" 
           id="link" 
           [ngClass] = "{'active': this._tab.currentTab===6}"
@@ -71,10 +59,35 @@
           </div>
           <ng-template #logout>
 
-          <!-- <div id="icon">
-          <ion-icon name="person-circle-outline"></ion-icon>
-          </div> -->
-
+          <div id="link">
+            <div class="dropdown">
+              <a>
+                Admin
+                <i class="fa fa-caret-down"></i>
+              </a>
+              <div class="dropdown-content">
+                <a
+                [ngClass] = "{'active': this._tab.currentTab===5}"
+                (click)="this._search.clearSearch(); 
+                this.clearInputs();
+                this._tab.currentTab=5"
+                [routerLink] = "'/newWBG'">
+                Add New WBG
+              </a>
+                <a
+                [ngClass] = "{'active': this._tab.currentTab===7}"
+                (click)="this._search.clearSearch();
+                this._wine.getPreviousWines();
+                this.clearInputs();
+                this._tab.currentTab=7"
+                [routerLink] = "'/previousWines'">
+                Previous WBG
+              </a>
+                <a href="#">Logout</a>
+              </div>
+            </div>
+          </div>
+<!-- 
           <div id="link"
             (click)= "this._search.clearSearch(); 
             this._admin.logout();
@@ -84,7 +97,7 @@
           <a>
             Logout
           </a>
-        </div>
+        </div> -->
 
 
         </ng-template>

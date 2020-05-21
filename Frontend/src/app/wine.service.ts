@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { AdminService } from './admin.service';
+import { TabService } from './tab.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,8 @@ export class WineService {
   constructor(
     private http: HttpClient, 
     private router: Router,
-    private _admin: AdminService
+    private _admin: AdminService,
+    private _tab: TabService
     ) { }
 
   baseUrl: string = "http://localhost:3000/wbgs";
@@ -68,7 +70,7 @@ export class WineService {
       this.clearWbgInputs();
       this.getAllWbg();
       this.router.navigateByUrl('/wbgList')
-      this._admin.tab = 1;
+      this._tab.currentTab = 1;
     });
   }
 
@@ -133,7 +135,7 @@ export class WineService {
       this.clearWbgInputs();
       this.getAllWbg();
       this.router.navigateByUrl('/wbgList')
-      this._admin.tab = 1;
+      this._tab.currentTab = 1;
     });
   }
 
