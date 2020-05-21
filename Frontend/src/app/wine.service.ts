@@ -98,6 +98,9 @@ export class WineService {
     //get all Wbg and store to all Wbg variable/update arrays
     this.http.get(this.deleteWineUrl)
     .subscribe(response => {
+      if(response === []) {
+        this.previousWines.push({message: "Sorry, there are not previous wines yet"})
+      }
 
       console.log("All Previous WBG", response);
 

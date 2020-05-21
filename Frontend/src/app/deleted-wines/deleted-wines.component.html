@@ -2,6 +2,13 @@
     <h4>Loading Wines...</h4>
     <div class="loader"></div>
 </div>
+
+<div *ngIf="this._wine.previousWines.message; else wines">
+    <h4>{{this._wine.previousWines.message}}</h4>
+</div>
+
+<ng-template #wines>
+
 <div *ngIf="this._wine.previousWines">
     <div class="container">
         <div class="wine-2" *ngFor="let wine of this._wine.previousWines">
@@ -58,4 +65,6 @@
         </div>
     </div>
 </div>
+
+</ng-template>
 
