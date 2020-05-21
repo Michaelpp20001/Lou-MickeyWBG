@@ -158,6 +158,15 @@ export class WineService {
     this.router.navigateByUrl('/previousWines');
   }
 
+  deleteIndefinitely(wine) {
+    console.log(wine);
+    this.http.delete(this.deleteWineUrl + "/" + wine.id, wine)
+    .subscribe(response => {
+      console.log("SUCCESS")
+      this.getPreviousWines();
+    });
+  }
+
   clearWbgInputs() {
     this.keywords = [];
     this.sparklingWine = [];
