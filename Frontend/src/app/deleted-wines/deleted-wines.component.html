@@ -3,8 +3,8 @@
     <div class="loader"></div>
 </div>
 
-<div *ngIf="this._wine.previousWines.message; else wines">
-    <h4>{{this._wine.previousWines.message}}</h4>
+<div *ngIf="this._wine.message; else wines">
+    <h4>{{this._wine.message}}</h4>
 </div>
 
 <ng-template #wines>

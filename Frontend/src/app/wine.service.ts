@@ -28,6 +28,7 @@ export class WineService {
   redWine: any = [];
   keywords: any = [];
   filterWords: any = ["the", "a", "an", "and", ",", ":", ";"];
+  message: string;
   newWine = {
       id: "",
       category: "",
@@ -99,7 +100,7 @@ export class WineService {
     this.http.get(this.deleteWineUrl)
     .subscribe(response => {
       if(response === []) {
-        this.previousWines.push({message: "Sorry, there are not previous wines yet"})
+        this.message = "Sorry, there are no previous wines yet";
       }
 
       console.log("All Previous WBG", response);
