@@ -1,5 +1,6 @@
-import { Component, EventEmitter, Output, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { SearchService } from '../search.service';
+import { TabService } from '../tab.service'; 
 
 @Component({
   selector: 'app-search-bar',
@@ -8,17 +9,8 @@ import { SearchService } from '../search.service';
 })
 export class SearchBarComponent {
 
-  constructor(private _search: SearchService) { }
-
-  @Output() tabEvent = new EventEmitter();
-  
-  onSearchWBG() {
-    this._search.searchWBG();
-  }
-
-  changeTabEvent() {
-    const tab = 0;
-    this.tabEvent.emit(tab);
-  }
-
+  constructor(
+    private _search: SearchService,
+    private _tab: TabService
+    ) { }
 }

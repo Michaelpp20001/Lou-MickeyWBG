@@ -1,6 +1,15 @@
 <div class="search">
-    <input [(ngModel)]="this._search.searchTerm" (keyup.enter)="_search.searchWBG()" (keyup.enter)="changeTabEvent()" type="text" class="searchTerm" placeholder="What are you looking for?">
-    <button (click)="onSearchWBG()" (click)='changeTabEvent()' type="submit" class="searchButton">
+    <input 
+    [(ngModel)]="this._search.searchTerm" 
+    (keyup.enter)="_search.searchWBG(); this._tab.currentTab=0"
+    type="text" 
+    class="searchTerm" 
+    placeholder="What are you looking for?"
+    >
+    <button 
+    (click)="_search.searchWBG(); this._tab.currentTab=0"
+    type="submit" 
+    class="searchButton">
         <i class="fas fa-search"></i>
     </button>
 </div>
