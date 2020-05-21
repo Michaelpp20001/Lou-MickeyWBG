@@ -9,6 +9,10 @@
 
 <ng-template #wines>
 
+<div>
+    <h4>All previously deleted wines from WBG list</h4>
+</div>
+
 <div *ngIf="this._wine.previousWines">
     <div class="container">
         <div class="wine-2" *ngFor="let wine of this._wine.previousWines">

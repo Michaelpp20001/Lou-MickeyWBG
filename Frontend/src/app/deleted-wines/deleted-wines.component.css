@@ -30,6 +30,11 @@
     }
   }
 
+  h4 {
+      text-align: center;
+      font-size: 18px;
+  }
+
 
 .img2 {
     min-height: 45vh;
