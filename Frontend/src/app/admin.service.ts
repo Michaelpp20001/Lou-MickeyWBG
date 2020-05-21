@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
+import { TabService } from './tab.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AdminService {
 
-  constructor() { }
-
-  tab = 0;
+  constructor(
+    private _tab: TabService,
+  ) { }
 
   admin = "admin";
   password = "admin";
@@ -16,7 +17,7 @@ export class AdminService {
 
   logout() {
     this.loggedIn = false;
-    this.tab=1;
+    this._tab.currentTab=1;
   }
 
 }

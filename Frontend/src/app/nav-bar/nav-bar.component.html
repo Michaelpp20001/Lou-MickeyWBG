@@ -3,11 +3,11 @@
         <img src="../assets/LouandMickeysLogo2.png" alt="Lou and Mickey's logo">
       </div>
       <div class="search-bar">
-        <app-search-bar (tabEvent)="displayTab($event)"></app-search-bar>
+        <app-search-bar></app-search-bar>
       </div>
       <div id="nav-links">
         <div id="link" 
-          [ngClass] = "{'active': this._tab.currentTab === 1 || this._admin.tab === 1}" 
+          [ngClass] = "{'active': this._tab.currentTab===1}" 
           (click)= "this._search.clearSearch(); 
           this._tab.currentTab=1"
           [routerLink] = "'/wbgList'"
@@ -19,8 +19,7 @@
         <div id="link" 
           [ngClass] = "{'active': this._tab.currentTab===2}" 
           (click)= "this._search.clearSearch(); 
-          this._tab.currentTab=2; 
-          this._admin.tab = 0"
+          this._tab.currentTab=2"
           [routerLink] = "'/redWine'"
         >
           <a>
@@ -30,8 +29,7 @@
         <div id="link"
           [ngClass] = "{'active': this._tab.currentTab===3}" 
           (click)= "this._search.clearSearch(); 
-          this._tab.currentTab=3; 
-          this._admin.tab = 0"
+          this._tab.currentTab=3"
           [routerLink] = "'/whiteWine'"
         >
           <a>
@@ -41,30 +39,30 @@
         <div id="link" 
           [ngClass] = "{'active': this._tab.currentTab===4}"
           (click)="this._search.clearSearch();
-          this._tab.currentTab=4; 
-          this._admin.tab = 0"
+          this._tab.currentTab=4"
           [routerLink] = "'/sparklingWine'"
         >
           <a>
             Sparkling Wine
           </a>
         </div>
-        <div *ngIf="this._admin.loggedIn" id="link"
-        [ngClass] = "{'active': this._tab.currentTab===5}" 
-        (click)="this._search.clearSearch(); 
-        this.clearInputs();
-        this._tab.currentTab=5; 
-        this._admin.tab = 0"
-        [routerLink] = "'/newWBG'"
+        <div *ngIf="this._admin.loggedIn" 
+          id="link"
+          [ngClass] = "{'active': this._tab.currentTab===5}" 
+          (click)="this._search.clearSearch(); 
+          this.clearInputs();
+          this._tab.currentTab=5"
+          [routerLink] = "'/newWBG'"
         >
           <a>
             Add New WBG
           </a>
         </div>
-        <div *ngIf="!this._admin.loggedIn; else logout" id="link" 
+        <div *ngIf="!this._admin.loggedIn; else logout" 
+          id="link" 
+          [ngClass] = "{'active': this._tab.currentTab===6}"
           (click)= "this._search.clearSearch(); 
-          this._tab.currentTab=0; 
-          this._admin.tab = 0"
+          this._tab.currentTab=6"
           [routerLink] = "'/adminLogin'"
         >
           <a *ngIf="!this._admin.loggedIn">
@@ -80,9 +78,7 @@
           <div id="link"
             (click)= "this._search.clearSearch(); 
             this._admin.logout();
-            this.showDialog();
-            this._tab.currentTab=0; 
-            this._admin.tab = 1"
+            this.showDialog()"
             [routerLink] = "'/wbgList'"
           >
           <a>
