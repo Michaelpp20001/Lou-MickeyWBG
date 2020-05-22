@@ -3,7 +3,7 @@
 </p>
 <div *ngIf="this._search.searchResults">
     <div class="container">
-        <div class="wine-2" *ngFor="let wine of this._search.searchResults">
+        <div class="wine" *ngFor="let wine of this._search.searchResults">
             <div class="label">
                 <img class="img2" src="{{wine.labelImage}}" alt="label">
             </div>
@@ -12,7 +12,7 @@
                 [innerHTML]="wine.name | highlight: _search.PositiveSearchTerm">
                     {{wine.name}}
                 </div>
-                    <span [innerHTML]="wine.subRegion | highlight: _search.PositiveSearchTerm">
+                    <h4 id="regions"><span [innerHTML]="wine.subRegion | highlight: _search.PositiveSearchTerm">
                         {{wine.subRegion}}
                     </span>
                     <span>, </span>
@@ -23,6 +23,7 @@
                     <span [innerHTML]="wine.country | highlight: _search.PositiveSearchTerm">
                         {{wine.country}}
                     </span>
+                    </h4>
                 <div class="descriptors">
                     <div class="key"><span>Palate</span></div>
                     <div class="value" [innerHTML]="wine.palate | highlight: _search.PositiveSearchTerm">
@@ -66,13 +67,13 @@
                     </div>
                 </div>
                 <div class="descriptors">
-                    <div class="key"><span>WinemakingNotes</span></div>
+                    <div class="key"><span>Winemaking</span></div>
                     <div class="value" [innerHTML]="wine.wineMakingNotes | highlight: _search.PositiveSearchTerm">
                         {{wine.wineMakingNotes}}
                     </div>
                 </div>
                 <div class="descriptors">
-                    <div class="key"><span>Other Notes</span></div>
+                    <div class="key"><span>Notes</span></div>
                     <div class="value" [innerHTML]="wine.notes | highlight: _search.PositiveSearchTerm">
                         {{wine.notes}}
                     </div>
