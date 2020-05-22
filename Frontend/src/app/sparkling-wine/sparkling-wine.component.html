@@ -1,6 +1,6 @@
 <div class="container" *ngIf="this._wine.sparklingWine">
     <div class="container">
-        <div class="wine-2" *ngFor="let wine of this._wine.sparklingWine">
+        <div class="wine" *ngFor="let wine of this._wine.sparklingWine">
             <div class="label">
                 <img class="img2" src="{{wine.labelImage}}" alt="label">
             </div>
@@ -39,11 +39,11 @@
                     <div class="value">{{wine.abv}}</div>
                 </div>
                 <div class="descriptors">
-                    <div class="key"><span>WinemakingNotes</span></div>
+                    <div class="key"><span>Winemaking</span></div>
                     <div class="value">{{wine.wineMakingNotes}}</div>
                 </div>
                 <div class="descriptors">
-                    <div class="key"><span>Other Notes</span></div>
+                    <div class="key"><span>Notes</span></div>
                     <div class="value">{{wine.notes}}</div>
                 </div>
                 <div class="button-container">

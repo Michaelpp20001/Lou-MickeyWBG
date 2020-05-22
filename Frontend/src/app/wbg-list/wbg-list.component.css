@@ -24,7 +24,7 @@
     }
   }
 
-  /* body styles */
+/* body styles */
 .container {
     display: flex;
     flex-direction: column;
