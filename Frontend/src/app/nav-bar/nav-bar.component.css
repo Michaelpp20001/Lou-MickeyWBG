@@ -1,38 +1,41 @@
 .navbar {
     display: flex;
-    align-items: stretch;
+    flex-wrap: wrap;
+    align-items: center;
     box-shadow: 0 4px 10px  0 rgba(0,0,0,0.2);
 }
 
 img {
-    max-width: 300px;
+    width: 100vw;
 }
 
 .lou-logo {
+    flex-grow: 1;
     padding-left: 10px;
     padding-right: 10px;
+    flex-basis: 300px;
 }
 .search-bar {
-    flex-grow: 2;
-    margin-top: 19px
+    flex-grow: 3;
+    flex-basis: 300px;
 }
 
 #nav-links {
     display: flex;
-    align-items: stretch;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    flex-grow: 1;
+    flex-basis: 300px;
 }
 
 .active, #link:hover {
-    background: #ededed;
-    color: white;
     cursor: pointer;
     transition: 0.6s ease-out;
+    border-bottom: solid 2px black;
 }
 
-#link, a {
-    padding: 32px 10px 32px 10px;
-    text-decoration: none;
-    color: black;
+#link {
+    padding: 10px 10px
 }
 
 /* Dropdown container - needed to position the dropdown content */

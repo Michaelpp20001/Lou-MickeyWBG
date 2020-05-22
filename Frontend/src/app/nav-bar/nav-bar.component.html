@@ -11,36 +11,28 @@
           (click)= "this._search.clearSearch(); 
           this._tab.currentTab=1"
           [routerLink] = "'/wbgList'">
-          <a>
-            All WBG
-          </a>
+            WBG
         </div>
         <div id="link" 
           [ngClass] = "{'active': this._tab.currentTab===2}" 
           (click)= "this._search.clearSearch(); 
           this._tab.currentTab=2"
           [routerLink] = "'/redWine'">
-          <a>
-            Red Wine
-          </a>
+            Red
         </div>
         <div id="link"
           [ngClass] = "{'active': this._tab.currentTab===3}" 
           (click)= "this._search.clearSearch(); 
           this._tab.currentTab=3"
           [routerLink] = "'/whiteWine'">
-          <a>
-            White Wine
-          </a>
+            White
         </div>
         <div id="link" 
           [ngClass] = "{'active': this._tab.currentTab===4}"
           (click)="this._search.clearSearch();
           this._tab.currentTab=4"
           [routerLink] = "'/sparklingWine'">
-          <a>
-            Sparkling Wine
-          </a>
+            Sparkling
         </div>
         <div *ngIf="!this._admin.loggedIn; else logout" 
           id="link" 
@@ -48,18 +40,14 @@
           (click)= "this._search.clearSearch(); 
           this._tab.currentTab=6"
           [routerLink] = "'/adminLogin'">
-          <a *ngIf="!this._admin.loggedIn">
-            Admin Login
-          </a>
+            Admin
           </div>
           <ng-template #logout>
 
           <div id="link">
             <div class="dropdown">
-              <a>
                 Admin
                 <i class="fa fa-caret-down"></i>
-              </a>
               <div class="dropdown-content">
                 <a
                 (click)="this._search.clearSearch(); 
