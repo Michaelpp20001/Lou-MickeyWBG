@@ -1,3 +1,4 @@
+/* Navbar styling, used flexbox to be responsive */
 .navbar {
     display: flex;
     flex-wrap: wrap;
@@ -39,7 +40,7 @@ img {
 }
 
 /* Dropdown container - needed to position the dropdown content */
-/* Style the dropdown a tag to fit inside the topnav */
+/* Style the dropdown a tag to fit inside the navbar */
 .dropdown {
     float: left;
     overflow: hidden;
@@ -84,6 +85,7 @@ img {
     display: block;
   }
 
+/*show or hide the logout popup*/
 .sshow {
     display: block;
 }
