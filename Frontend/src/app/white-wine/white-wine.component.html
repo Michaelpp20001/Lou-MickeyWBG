@@ -48,7 +48,7 @@
                     </div>
                     <div class="button-container">
                         <div class="update"><button id="update-btn" *ngIf="this._admin.loggedIn" (click)="this._wine.selectWine(wine)">Update</button></div>
-                        <div class="delete"><button id="delete-btn" *ngIf="this._admin.loggedIn" (click)="this._wine.selectWine(wine)">Delete</button></div>
+                        <div class="delete"><button id="delete-btn" *ngIf="this._admin.loggedIn" (click)="this._wine.deleteWine(wine)">Delete</button></div>
                     </div>
                 </div>
             </div>

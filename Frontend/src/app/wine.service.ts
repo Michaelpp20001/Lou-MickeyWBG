@@ -22,13 +22,12 @@ export class WineService {
     labelImage: "",
   };
   allWbg: any;
-  previousWines: any;
+  previousWines: any = [];
   sparklingWine: any = [];
   whiteWine: any = [];
   redWine: any = [];
   keywords: any = [];
   filterWords: any = ["the", "a", "an", "and", ",", ":", ";"];
-  message: string;
   newWine = {
       id: "",
       category: "",
@@ -99,9 +98,6 @@ export class WineService {
     //get all Wbg and store to all Wbg variable/update arrays
     this.http.get(this.deleteWineUrl)
     .subscribe(response => {
-      if(response === []) {
-        this.message = "Sorry, there are no previous wines yet";
-      }
 
       console.log("All Previous WBG", response);
 
@@ -130,6 +126,13 @@ export class WineService {
     this.router.navigateByUrl('/updateWbg');
   }
 
+  addBackToList(wine) {
+    this.newWine = wine;
+    this.deleteIndefinitely(wine);
+    delete this.newWine.id;
+    this.router.navigateByUrl('/newWBG');
+  }
+
   updateWine() {
     this.winePreLoad();
     this.http.put(this.baseUrl + "/" + this.newWine.id, this.newWine)
@@ -146,6 +149,11 @@ export class WineService {
   deleteWine(wine) {
     console.log(wine);
 
+    this.http.delete(this.baseUrl + "/" + wine.id, wine)
+    .subscribe(response => {
+      console.log("Successfully deleted off WBG list")
+      this.getAllWbg();
+    })
     delete wine.id;
      
     console.log(wine);
@@ -160,13 +168,14 @@ export class WineService {
       this.getPreviousWines();
     });
     this.router.navigateByUrl('/previousWines');
+    this._tab.currentTab = 0;
   }
 
   deleteIndefinitely(wine) {
     console.log(wine);
     this.http.delete(this.deleteWineUrl + "/" + wine.id, wine)
     .subscribe(response => {
-      console.log("SUCCESS")
+      console.log("Successfully deleted forever")
       this.getPreviousWines();
     });
   }

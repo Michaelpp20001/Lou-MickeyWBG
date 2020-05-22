@@ -3,8 +3,8 @@
     <div class="loader"></div>
 </div>
 
-<div *ngIf="this._wine.message; else wines">
-    <h4>{{this._wine.message}}</h4>
+<div *ngIf="this._wine.previousWines.length === 0; else wines">
+    <h4>Sorry, there are no previous wines yet!</h4>
 </div>
 
 <ng-template #wines>
@@ -62,7 +62,7 @@
                     <div class="value">{{wine.notes}}</div>
                 </div>
                 <div class="button-container">
-                    <div class="update"><button id="update-btn" *ngIf="this._admin.loggedIn">Place back on list</button></div>
+                    <div class="update"><button id="update-btn" *ngIf="this._admin.loggedIn" (click)="this._wine.addBackToList(wine)">Place back on list</button></div>
                     <div class="delete"><button id="delete-btn" *ngIf="this._admin.loggedIn" (click)="this._wine.deleteIndefinitely(wine)">Remove indefinitely</button></div>
                 </div>
             </div>
