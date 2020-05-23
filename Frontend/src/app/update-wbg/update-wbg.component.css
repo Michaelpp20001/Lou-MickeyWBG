@@ -28,13 +28,29 @@ form h1 {
       display: block;
   }
 
-  input, .properties {
+  input, .properties, textarea {
       width: 98%;
-      padding: 5px;
+      padding: 5px 0px 5px 10px;
   }
 
 img {
     min-height: 45vh;
     max-width: 300px;
     max-height: 45vh;
+}
+
+@media screen and (max-width: 600px) {
+  form {
+    width: 100%;
+    padding: 2px 0px
+  }
+
+  .container {
+    margin: 1rem 0rem;
+  }
+
+  h1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
