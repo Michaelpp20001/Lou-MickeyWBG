@@ -46,11 +46,28 @@
 
   .title, .form {
       text-align: center;
+      background-color:  #ededed;
   }
 
+  /* button styles */
   .btn {
       margin-bottom: 15px;
   }
+
+  button {
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'roboto', sans-serif;
+    border: 2px solid #148bb3;
+}
+
+button:hover {
+    cursor: pointer;
+    border: 2px solid #148bb3;
+    color: white;
+    background-color: #148bb3;
+}
 
   @media screen and (max-width: 900px) {
     .card {
@@ -64,6 +81,9 @@
     }
     img {
         max-height: 50vh;
+    }
+    .title, .form {
+        background-color: white;
     }
   }
 
