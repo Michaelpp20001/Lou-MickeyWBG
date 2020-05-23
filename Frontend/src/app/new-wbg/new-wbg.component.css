@@ -38,7 +38,35 @@ img {
     max-width: 300px;
     max-width: 45vw;
 }
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
 
+.cancel, .confirm {
+  padding: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'roboto', sans-serif;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+  border: none;
+}
+
+#confirm-btn:hover {
+  background-color: #f7ecab;
+}
+
+#cancel-btn:hover {
+  background-color: #ffbfbf;
+}
 @media screen and (max-width: 600px) {
   form {
     width: 100%;

@@ -70,8 +70,10 @@
                 <label>Wine Label Preview</label>
                 <img src="{{this._wine.selectedFile.labelImage}}" alt="selected labelImage"><br>
             </div>
-            <button type="button" (click)="onUploadNewWine()">Submit New Wine</button>
-            <button type="button" (click)="cancel()">Cancel</button>
+            <div class="btn-container">
+                <div class="confirm"><button id="confirm-btn" (click)="onUploadNewWine()">Submit New Wine</button></div>
+                <div class="cancel"><button id="cancel-btn" (click)="cancel()">Cancel</button></div>
+            </div>
         </div>
     </form>
 </div>
