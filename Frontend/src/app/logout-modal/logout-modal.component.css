@@ -1,9 +1,12 @@
 .mmodal {
     z-index: 1000;
     position: fixed;
-    top: 250px;
-    left: 35vw;
-    width: 30%;
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40vw;
     animation: popup 0.5s ease-out;
 }
 
@@ -19,8 +22,16 @@
 .mmodal-body {
     background: #fff;
     padding: 20px;
-    display: flex;
-    align-items: center;
+    border-radius: 5px;
+}
+
+.mmodal-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.btn {
     border-radius: 5px;
 }
 
@@ -33,4 +44,16 @@
     left: 0;
     background-color: #919191;
     opacity: 0.50;
+}
+
+@media screen and (max-width: 900px) {
+    .mmodal {
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .mmodal {
+        width: 80vw;
+    }
 }
