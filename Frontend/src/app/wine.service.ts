@@ -16,7 +16,7 @@ export class WineService {
     private _tab: TabService
     ) { }
 
-  baseUrl: string = "http://localhost:5000/wbgs";
+  baseUrl: string = "http://localHost:5000/wbgs";
   deleteWineUrl: string = "http://localHost:3000/deletedwbgs";
   selectedFile: any = {
     labelImage: "",
