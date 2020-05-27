@@ -17,7 +17,7 @@ export class WineService {
     ) { }
 
   baseUrl: string = "https://stark-shelf-74007.herokuapp.com//wbgs";
-  deleteWineUrl: string = "https://localHost:3000/deletedwbgs";
+  deleteWineUrl: string = "https://stark-shelf-74007.herokuapp.com/deletedwbgs";
   selectedFile: any = {
     labelImage: "",
   };
