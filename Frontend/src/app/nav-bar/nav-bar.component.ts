@@ -19,6 +19,7 @@ export class NavBarComponent implements OnInit {
     ) { }
 
   tab = 1;
+  hide = false;
 
   ngOnInit() {
   }
@@ -48,6 +49,11 @@ export class NavBarComponent implements OnInit {
         labelImage: "",
         keywords: [],
     }
+  }
+
+  toggleHide() {
+    this.hide = true;
+    console.log("clicked", this.hide)
   }
 
   showDialog(){

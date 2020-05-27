@@ -6,45 +6,44 @@
         <app-search-bar></app-search-bar>
       </div>
       <div id="nav-links">
-        <div id="link" 
+        <a routerLink = "/wbgList">
+          <div id="link" 
           [ngClass] = "{'active': this._tab.currentTab===1}" 
           (click)= "this._search.clearSearch(); 
-          this._tab.currentTab=1"
-          [routerLink] = "'/wbgList'">
+          this._tab.currentTab=1">
             WBG
-        </div>
-        <div id="link" 
+        </div></a>
+       <a routerLink = "/redWine">
+          <div id="link" 
           [ngClass] = "{'active': this._tab.currentTab===2}" 
           (click)= "this._search.clearSearch(); 
-          this._tab.currentTab=2"
-          [routerLink] = "'/redWine'">
+          this._tab.currentTab=2">
             Red
-        </div>
-        <div id="link"
+        </div></a>
+        <a routerLink = "/whiteWine">
+          <div id="link"
           [ngClass] = "{'active': this._tab.currentTab===3}" 
           (click)= "this._search.clearSearch(); 
-          this._tab.currentTab=3"
-          [routerLink] = "'/whiteWine'">
+          this._tab.currentTab=3">
             White
-        </div>
-        <div id="link" 
+        </div></a>
+        <a routerLink = "/sparklingWine">
+          <div id="link" 
           [ngClass] = "{'active': this._tab.currentTab===4}"
           (click)="this._search.clearSearch();
-          this._tab.currentTab=4"
-          [routerLink] = "'/sparklingWine'">
+          this._tab.currentTab=4">
             Sparkling
-        </div>
-        <div *ngIf="!this._admin.loggedIn; else logout" 
-          id="link" 
+        </div></a>
+        <a routerLink = "/adminLogin" *ngIf="!this._admin.loggedIn; else logout">
+          <div id="link" 
           [ngClass] = "{'active': this._tab.currentTab===6}"
           (click)= "this._search.clearSearch(); 
-          this._tab.currentTab=6"
-          [routerLink] = "'/adminLogin'">
+          this._tab.currentTab=6">
             Admin
-          </div>
+          </div></a>
           <ng-template #logout>
 
-          <div id="link">
+          <div id="drop-link">
             <div class="dropdown">
                 Admin
                 <i class="fa fa-caret-down"></i>

@@ -165,8 +165,17 @@ img {
     border-bottom: solid 2px black;
 }
 
-#link {
+#link, #drop-link {
     padding: 10px 10px
+}
+
+#drop-link:hover {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 /* Dropdown container - needed to position the dropdown content */
