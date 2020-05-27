@@ -18,7 +18,7 @@ export class SearchService {
   NegativeSearchTerm: any;
   searchResults: any = [];
   noSearchResults: string = "";
-  baseUrl: string = "http://localhost:3000/wbgs";
+  baseUrl: string = "https://stark-shelf-74007.herokuapp.com/wbgs";
 
   stringToArray(str) {
     return str.replace(/([,.])/g,"").trim().split(" ");

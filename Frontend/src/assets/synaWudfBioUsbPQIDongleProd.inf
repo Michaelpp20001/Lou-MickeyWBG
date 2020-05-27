@@ -1,0 +1,739 @@
+; Copyright (C) 2014 Synaptics Incorporated, All Rights Reserved.
+; synaWudfBioUsbPQIDongle.inf - Install the WBDI USB user-mode driver - Synaptics WBDI 
+;
+
+[Version]
+Signature="$Windows NT$"
+Class=Biometric
+ClassGuid={53D29EF7-377C-4D14-864B-EB3A85769359}
+Provider=%SYNAUMDF%
+CatalogFile=synaUMDF.cat
+DriverVer=11/02/2017,5.5.4020.1052
+
+[Manufacturer]
+%SYNAUMDF%=Synaptics,NTx86.6.1,NTx86.6.2
+
+; Win 7 only
+[Synaptics.NTx86.6.1]
+; TODO: Change the VendorID (VID) and ProductID (PID) to match your device
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0930
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0931
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0932
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0933
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0934
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0935
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0936
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0937
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0938
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0939
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0940
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0941
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0942
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0943
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0944
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0945
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0946
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0947
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0948
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0949
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0950
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0951
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0952
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0953
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0954
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0955
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0956
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0957
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0958
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0959
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0960
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0961
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0962
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0963
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0964
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0965
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0966
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0967
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0968
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0969
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0970
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0971
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0972
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0973
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0974
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0975
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0976
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0977
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0978
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0979
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0980
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0981
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0982
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0983
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0984
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0985
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0986
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0987
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0988
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0989
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0990
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0991
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0992
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0993
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0994
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0995
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0996
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0997
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0998
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0999
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A00
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A01
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A02
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A03
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A04
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A05
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A06
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A07
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A08
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A09
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A10
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A11
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A12
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A13
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A14
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A15
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A16
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A17
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A18
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A19
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A20
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A21
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A22
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A23
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A24
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A25
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A26
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A27
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A28
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A29
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A30
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A31
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A32
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A33
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A34
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A35
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A36
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A37
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A38
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A39
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A40
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A41
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A42
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A43
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A44
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A45
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A46
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A47
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A48
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A49
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A50
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A51
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A52
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A53
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A54
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A55
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A56
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A57
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A58
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A59
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A60
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A61
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A62
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A63
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A64
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A65
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A66
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A67
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A68
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A69
+%WBDIDeviceName%=Whitebox_Install_CP, USB\VID_3538&PID_0A70
+%WBDIDeviceName%=Biometric_Install_CP, USB\VID_3538&PID_0A71
+%WBDIDeviceName%=Biometric_Install_CP, USB\VID_3538&PID_0A72
+%WBDIDeviceName%=Biometric_Install_CP, USB\VID_3538&PID_0A73
+%WBDIDeviceName%=Biometric_Install_CP, USB\VID_3538&PID_0A74
+%WBDIDeviceName%=Biometric_Install_CP, USB\VID_3538&PID_0A75
+%WBDIDeviceName%=Biometric_Install_CP, USB\VID_3538&PID_0A76
+%WBDIDeviceName%=Biometric_Install_CP, USB\VID_3538&PID_0A77
+%WBDIDeviceName%=Biometric_Install_CP, USB\VID_3538&PID_0A78
+%WBDIDeviceName%=Biometric_Install_CP, USB\VID_3538&PID_0A79
+%WBDIDeviceName%=Biometric_Install_CP, USB\VID_3538&PID_0A80
+%WBDIDeviceName%=Biometric_Install_CP, USB\VID_06CB&PID_0082
+
+; Win 8 above
+[Synaptics.NTx86.6.2]
+; TODO: Change the VendorID (VID) and ProductID (PID) to match your device
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0930
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0931
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0932
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0933
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0934
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0935
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0936
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0937
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0938
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0939
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0940
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0941
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0942
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0943
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0944
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0945
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0946
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0947
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0948
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0949
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0950
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0951
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0952
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0953
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0954
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0955
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0956
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0957
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0958
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0959
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0960
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0961
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0962
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0963
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0964
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0965
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0966
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0967
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0968
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0969
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0970
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0971
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0972
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0973
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0974
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0975
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0976
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0977
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0978
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0979
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0980
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0981
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0982
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0983
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0984
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0985
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0986
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0987
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0988
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0989
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0990
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0991
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0992
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0993
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0994
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0995
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0996
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0997
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0998
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0999
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A00
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A01
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A02
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A03
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A04
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A05
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A06
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A07
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A08
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A09
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A10
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A11
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A12
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A13
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A14
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A15
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A16
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A17
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A18
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A19
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A20
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A21
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A22
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A23
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A24
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A25
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A26
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A27
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A28
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A29
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A30
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A31
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A32
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A33
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A34
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A35
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A36
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A37
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A38
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A39
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A40
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A41
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A42
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A43
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A44
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A45
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A46
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A47
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A48
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A49
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A50
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A51
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A52
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A53
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A54
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A55
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A56
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A57
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A58
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A59
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A60
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A61
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A62
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A63
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A64
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A65
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A66
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A67
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A68
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A69
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A70
+%WBDIDeviceName%=Biometric_Install, USB\VID_3538&PID_0A71
+%WBDIDeviceName%=Biometric_Install, USB\VID_3538&PID_0A72
+%WBDIDeviceName%=Biometric_Install, USB\VID_3538&PID_0A73
+%WBDIDeviceName%=Biometric_Install, USB\VID_3538&PID_0A74
+%WBDIDeviceName%=Biometric_Install, USB\VID_3538&PID_0A75
+%WBDIDeviceName%=Biometric_Install, USB\VID_3538&PID_0A76
+%WBDIDeviceName%=Biometric_Install, USB\VID_3538&PID_0A77
+%WBDIDeviceName%=Biometric_Install, USB\VID_3538&PID_0A78
+%WBDIDeviceName%=Biometric_Install, USB\VID_3538&PID_0A79
+%WBDIDeviceName%=Biometric_Install, USB\VID_3538&PID_0A80
+%WBDIDeviceName%=Biometric_Install, USB\VID_06CB&PID_0082
+
+[Synaptics.NTx86]
+; TODO: Change the VendorID (VID) and ProductID (PID) to match your device
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0930
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0931
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0932
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0933
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0934
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0935
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0936
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0937
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0938
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0939
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0940
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0941
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0942
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0943
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0944
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0945
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0946
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0947
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0948
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0949
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0950
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0951
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0952
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0953
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0954
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0955
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0956
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0957
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0958
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0959
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0960
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0961
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0962
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0963
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0964
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0965
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0966
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0967
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0968
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0969
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0970
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0971
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0972
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0973
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0974
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0975
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0976
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0977
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0978
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0979
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0980
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0981
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0982
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0983
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0984
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0985
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0986
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0987
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0988
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0989
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0990
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0991
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0992
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0993
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0994
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0995
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0996
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0997
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0998
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0999
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A00
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A01
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A02
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A03
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A04
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A05
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A06
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A07
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A08
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A09
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A10
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A11
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A12
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A13
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A14
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A15
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A16
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A17
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A18
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A19
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A20
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A21
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A22
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A23
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A24
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A25
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A26
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A27
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A28
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A29
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A30
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A31
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A32
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A33
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A34
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A35
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A36
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A37
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A38
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A39
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A40
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A41
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A42
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A43
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A44
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A45
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A46
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A47
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A48
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A49
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A50
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A51
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A52
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A53
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A54
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A55
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A56
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A57
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A58
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A59
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A60
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A61
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A62
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A63
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A64
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A65
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A66
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A67
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A68
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A69
+%WBDIDeviceName%=Whitebox_Install, USB\VID_3538&PID_0A70
+%WBDIDeviceName%=Biometric_Install, USB\VID_3538&PID_0A71
+%WBDIDeviceName%=Biometric_Install, USB\VID_3538&PID_0A72
+%WBDIDeviceName%=Biometric_Install, USB\VID_3538&PID_0A73
+%WBDIDeviceName%=Biometric_Install, USB\VID_3538&PID_0A74
+%WBDIDeviceName%=Biometric_Install, USB\VID_3538&PID_0A75
+%WBDIDeviceName%=Biometric_Install, USB\VID_3538&PID_0A76
+%WBDIDeviceName%=Biometric_Install, USB\VID_3538&PID_0A77
+%WBDIDeviceName%=Biometric_Install, USB\VID_3538&PID_0A78
+%WBDIDeviceName%=Biometric_Install, USB\VID_3538&PID_0A79
+%WBDIDeviceName%=Biometric_Install, USB\VID_3538&PID_0A80
+%WBDIDeviceName%=Biometric_Install, USB\VID_06CB&PID_0082
+
+;[ClassInstall32]
+;AddReg=BiometricClass_RegistryAdd
+
+;[BiometricClass_RegistryAdd]
+;HKR,,,,%ClassName%
+;HKR,,Icon,,"-201"
+;HKR,,IconPath,0x00010000,"%%SYSTEMROOT%%\system32\SysClass.dll,-201"
+
+[SourceDisksFiles]
+synaWudfBioUsb52.dll=1
+synaBscAdapter52.dll=1 ; Synaptics basic mode adapter
+WudfUpdate_01011.dll=1
+SynaCP52.dll=1
+PQIFingerprintManager.exe=1
+PQIFingerprintManager.lnk=1
+SynaFPCoInstaller.dll=1
+CheckFPDatabase.exe=1 ; Synaptics check DB and message exe
+
+[SourceDisksNames]
+
+1 = %MediaDescription%
+
+; =================== UMDF WBDI Usb Device - WBDI IOCTL interface ==================================
+
+[Whitebox_Install_CP.NT]
+CopyFiles=UMDriverCopy, WinBioEngineAdapterCopy, CPInstall, FWextCopy, SynDrvUpgradeCopy
+AddProperty=Device_Properties
+Include=WINUSB.INF                      ; Import sections from WINUSB.INF
+Needs=WINUSB.NT                         ; Run the CopyFiles & AddReg directives for WinUsb.INF
+
+[Whitebox_Install.NT]
+CopyFiles=UMDriverCopy, WinBioEngineAdapterCopy, FWextCopy, SGXCopyFile, SynDrvUpgradeCopy
+AddProperty=Device_Properties
+Include=WINUSB.INF                      ; Import sections from WINUSB.INF
+Needs=WINUSB.NT                         ; Run the CopyFiles & AddReg directives for WinUsb.INF
+
+[Whitebox_Install.NT.hw]
+AddReg=Biometric_Device_AddReg
+AddReg=DriverPlugInAddReg, DatabaseAddReg, UsdkAddReg
+
+[Whitebox_Install_CP.NT.hw]
+AddReg=Biometric_Device_AddReg
+AddReg=DriverPlugInAddReg, DatabaseAddReg, UsdkAddReg, CPAddReg
+DelReg=CPDelReg
+
+[Whitebox_Install_CP.NT.Services]
+AddService=WUDFRd,0x000001fa,WUDFRD_ServiceInstall  ; flag 0x2 sets this as the service for the device
+AddService=WinUsb,0x000001f8,WinUsb_ServiceInstall  ; this service is installed because its a filter.
+
+[Whitebox_Install.NT.Services]
+AddService=WUDFRd,0x000001fa,WUDFRD_ServiceInstall  ; flag 0x2 sets this as the service for the device
+AddService=WinUsb,0x000001f8,WinUsb_ServiceInstall  ; this service is installed because its a filter.
+
+[Whitebox_Install_CP.NT.Wdf]
+KmdfService=WINUSB, WinUsb_Install
+UmdfDispatcher=WinUsb
+UmdfService=synaWudfBioUsb52, synaWudfBioUsb52_Install
+UmdfServiceOrder=synaWudfBioUsb52
+UmdfHostProcessSharing=ProcessSharingDisabled
+
+[Whitebox_Install.NT.Wdf]
+KmdfService=WINUSB, WinUsb_Install
+UmdfDispatcher=WinUsb
+UmdfService=synaWudfBioUsb52, synaWudfBioUsb52_Install
+UmdfServiceOrder=synaWudfBioUsb52
+UmdfHostProcessSharing=ProcessSharingDisabled
+
+[Whitebox_Install_CP.NT.CoInstallers]
+AddReg=CoInstallers_AddReg
+CopyFiles=CoInstallers_CopyFiles
+
+[Whitebox_Install.NT.CoInstallers]
+AddReg=CoInstallers_AddReg
+CopyFiles=CoInstallers_CopyFiles
+
+[Biometric_Install_CP.NT]
+CopyFiles=UMDriverCopy, WinBioEngineAdapterCopy, CPInstall, FWextCopy, FMACopyFile, DeskTopCopy, SynDrvUpgradeCopy
+AddProperty=Device_Properties
+Include=WINUSB.INF                      ; Import sections from WINUSB.INF
+Needs=WINUSB.NT                         ; Run the CopyFiles & AddReg directives for WinUsb.INF
+
+[Biometric_Install.NT]
+CopyFiles=UMDriverCopy, WinBioEngineAdapterCopy, FWextCopy, SGXCopyFile, FMACopyFile, DeskTopCopy, SynDrvUpgradeCopy
+AddProperty=Device_Properties
+Include=WINUSB.INF                      ; Import sections from WINUSB.INF
+Needs=WINUSB.NT                         ; Run the CopyFiles & AddReg directives for WinUsb.INF
+
+[Biometric_Install.NT.hw]
+AddReg=Biometric_Device_AddReg
+AddReg=DriverPlugInAddReg, DatabaseAddReg, UsdkAddReg
+
+[Biometric_Install_CP.NT.hw]
+AddReg=Biometric_Device_AddReg
+AddReg=DriverPlugInAddReg, DatabaseAddReg, UsdkAddReg, CPAddReg
+DelReg=CPDelReg
+
+[Device_Properties]
+DeviceIcon,,,,"%%SYSTEMROOT%%\system32\SysClass.dll,-201" ; This is where a device specific icon can be specified.
+
+[Biometric_Install_CP.NT.Services]
+AddService=WUDFRd,0x000001fa,WUDFRD_ServiceInstall  ; flag 0x2 sets this as the service for the device
+AddService=WinUsb,0x000001f8,WinUsb_ServiceInstall  ; this service is installed because its a filter.
+
+[Biometric_Install.NT.Services]
+AddService=WUDFRd,0x000001fa,WUDFRD_ServiceInstall  ; flag 0x2 sets this as the service for the device
+AddService=WinUsb,0x000001f8,WinUsb_ServiceInstall  ; this service is installed because its a filter.
+
+[Biometric_Install_CP.NT.Wdf]
+KmdfService=WINUSB, WinUsb_Install
+UmdfDispatcher=WinUsb
+UmdfService=synaWudfBioUsb52, synaWudfBioUsb52_Install
+UmdfServiceOrder=synaWudfBioUsb52
+UmdfHostProcessSharing=ProcessSharingDisabled
+
+[Biometric_Install.NT.Wdf]
+KmdfService=WINUSB, WinUsb_Install
+UmdfDispatcher=WinUsb
+UmdfService=synaWudfBioUsb52, synaWudfBioUsb52_Install
+UmdfServiceOrder=synaWudfBioUsb52
+UmdfHostProcessSharing=ProcessSharingDisabled
+
+[Biometric_Install_CP.NT.CoInstallers]
+AddReg=CoInstallers_AddReg
+CopyFiles=CoInstallers_CopyFiles
+
+[Biometric_Install.NT.CoInstallers]
+AddReg=CoInstallers_AddReg
+CopyFiles=CoInstallers_CopyFiles
+
+[WinUsb_Install]
+KmdfLibraryVersion = 1.11
+
+[synaWudfBioUsb52_Install]
+UmdfLibraryVersion=1.11.0
+DriverCLSID = "{96710705-B080-4B29-A3EC-B16935AE663A}"
+ServiceBinary = "%12%\UMDF\synaWudfBioUsb52.dll"
+
+[Biometric_Device_AddReg]
+HKR,,"DeviceCharacteristics",0x10001,0x0100     ; Use same security checks on relative opens
+HKR,,"Security",,"D:P(A;;GA;;;BA)(A;;GA;;;SY)"  ; Allow generic-all access to Built-in administrators and Local system
+;HKR,,Security,,"D:P(A;;GA;;;BA)(A;;GA;;;SY)(A;;GA;;;S-1-5-84-0-0-0-0-0")
+HKR,,"LowerFilters",0x00010008,"WinUsb"         ; FLG_ADDREG_TYPE_MULTI_SZ | FLG_ADDREG_APPEND
+HKR,,"Exclusive",0x10001,1
+HKR,,"DeviceIdleEnabled",0x00010001,1
+HKR,,"UserSetDeviceIdleEnabled",0x00010001,1
+HKR,,"DefaultIdleState",0x00010001,1
+HKR,,"DefaultIdleTimeout",0x00010001,5000
+HKR,,"WinUsbPowerPolicyOwnershipDisabled",0x00010001,1
+
+[DriverPlugInAddReg]
+HKR,WinBio\Configurations,DefaultConfiguration,,"0"
+HKR,WinBio\Configurations\0,SensorMode,0x10001,2                                ; Basic - 1, Advanced - 2
+HKR,WinBio\Configurations\0,SystemSensor,0x10001,1                              ; UAC/Winlogon - 1
+HKR,WinBio\Configurations\0,SensorAdapterBinary,,"SynaBscAdapter52.DLL"      ; Windows built-in WBDI sensor adapter.
+HKR,WinBio\Configurations\0,EngineAdapterBinary,,"synaBscAdapter52.DLL"           ; Synaptics engine adapter.
+HKR,WinBio\Configurations\0,StorageAdapterBinary,,"WinBioStorageAdapter.DLL"    ; Windows built-in storage adapter
+HKR,WinBio\Configurations\0,DatabaseId,,"7B5D3242-420A-4287-8CFE-495C28DD9F21"  ; must have Synaptics specific GUID for DB
+
+[DatabaseAddReg]
+HKLM, System\CurrentControlSet\Services\WbioSrvc\Databases\{7B5D3242-420A-4287-8CFE-495C28DD9F21},BiometricType,0x00010001,0x00000008
+HKLM, System\CurrentControlSet\Services\WbioSrvc\Databases\{7B5D3242-420A-4287-8CFE-495C28DD9F21},Attributes,0x00010001,0x00000001
+HKLM, System\CurrentControlSet\Services\WbioSrvc\Databases\{7B5D3242-420A-4287-8CFE-495C28DD9F21},Format,,"00000000-0000-0000-0000-000000000000"
+HKLM, System\CurrentControlSet\Services\WbioSrvc\Databases\{7B5D3242-420A-4287-8CFE-495C28DD9F21},InitialSize,0x00010001,0x00000020
+HKLM, System\CurrentControlSet\Services\WbioSrvc\Databases\{7B5D3242-420A-4287-8CFE-495C28DD9F21},AutoCreate,0x00010001,0x00000001
+HKLM, System\CurrentControlSet\Services\WbioSrvc\Databases\{7B5D3242-420A-4287-8CFE-495C28DD9F21},AutoName,0x00010001,0x00000001
+HKLM, System\CurrentControlSet\Services\WbioSrvc\Databases\{7B5D3242-420A-4287-8CFE-495C28DD9F21},FilePath,,""
+HKLM, System\CurrentControlSet\Services\WbioSrvc\Databases\{7B5D3242-420A-4287-8CFE-495C28DD9F21},ConnectionString,,""
+
+[UsdkAddReg]
+HKLM, "SOFTWARE\Validity\"
+
+[UsdkAddReg.Security]
+"D: (A;CIOI;GA;;;LS)"
+
+[CPAddReg]
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\Credential Providers\{A324AC4C-2605-40C1-BF3C-926BD2A25975},,,"SynaCP52"
+HKCR, CLSID\{A324AC4C-2605-40C1-BF3C-926BD2A25975},,,"SynaCP52"
+HKCR, CLSID\{A324AC4C-2605-40C1-BF3C-926BD2A25975}\InprocServer32,,,"SynaCP52.dll"
+HKCR, CLSID\{A324AC4C-2605-40C1-BF3C-926BD2A25975}\InprocServer32,ThreadingModel,,"Apartment"
+
+[CPDelReg]
+HKLM, SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\Credential Providers\{AC3AC249-E820-4343-A65B-377AC634DC09},Disabled,0x00010001,0x00000001
+
+[WUDFRD_ServiceInstall]
+DisplayName = %WudfRdDisplayName%
+ServiceType = 1
+StartType = 3
+ErrorControl = 1
+ServiceBinary = %12%\WUDFRd.sys
+LoadOrderGroup = Base
+
+[WinUsb_ServiceInstall]
+DisplayName     = %WinUsb_SvcDesc%
+ServiceType     = 1
+StartType       = 3
+ErrorControl    = 1
+ServiceBinary   = %12%\WinUSB.sys
+
+[CoInstallers_AddReg]
+HKR,,CoInstallers32,0x00010000,"SynaFPCoInstaller.dll,secureCIEntry", "WudfUpdate_01011.dll"
+
+[CoInstallers_CopyFiles]
+WudfUpdate_01011.dll
+SynaFPCoInstaller.dll
+
+[DestinationDirs]
+UMDriverCopy=12,UMDF ; copy to \Windows\System32\drivers\UMDF
+WinBioEngineAdapterCopy=11, WinBioPlugins; copy to \Windows\System32\WinBioPlugins
+CoInstallers_CopyFiles=11
+CPInstall=11
+FMACopyFile=16422, Synaptics\SynFP
+DeskTopCopy=16409
+SynFPCICopy=24,ProgramData\Synaptics\SynFP
+SynDrvUpgradeCopy=24,ProgramData\Synaptics
+
+[UMDriverCopy]
+synaWudfBioUsb52.dll
+
+[WinBioEngineAdapterCopy]
+synaBscAdapter52.dll
+
+[SynFPCICopy]
+WudfUpdate_01011.dll
+SynaFPCoInstaller.dll
+
+[SynDrvUpgradeCopy]
+CheckFPDatabase.exe
+
+[SignatureAttributes]
+synaBscAdapter52.dll = SignatureAttributes.WindowsHello
+
+[SignatureAttributes.WindowsHello]
+WindowsHello = true
+
+[FMACopyFile]
+PQIFingerprintManager.exe
+
+[CPInstall]
+SynaCP52.dll
+
+[DeskTopCopy]
+PQIFingerprintManager.lnk
+
+[FWextCopy]
+
+[SGXCopyFile]
+
+; =================== Generic ==================================
+
+[Strings]
+SYNAUMDF="Synaptics Incorporated"
+MediaDescription="Synaptics Fingerprint Sensor Driver Installation Media"
+ClassName="Biometric Devices"
+WudfRdDisplayName="Windows Driver Foundation - User-mode Driver Framework Reflector"
+WBDIDeviceName="Synaptics WBDI Fingerprint Reader - USB 052" 
+WinUsb_SvcDesc="WinUSB Driver"
+CustomerProject="PQIDongle-052"
